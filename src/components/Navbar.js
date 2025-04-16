@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
+import { links, socials } from "../data/links";
 import logo from "../assets/logo.svg";
 
 const Navbar = () => {
@@ -16,28 +17,30 @@ const Navbar = () => {
         </div>
         <div className="links Container show-container">
           <ul className="links">
-            <li>
-              <Link to="/">Projects</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact Me!</Link>
-            </li>
+            {links.map((link) => {
+              const { id, url, text } = link;
+              return (
+                <li key={id}>
+                  <Link to={url}>{text}</Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <ul className="social-icons">
-          <li>
-            <a href="https://www.linkedin.com/in/torres-joshua/">
-              <FaLinkedin />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/torres2235">
-              <FaGithub />
-            </a>
-          </li>
+          {socials.map((link) => {
+            const { id, url, icon } = link;
+            return (
+              <li key={id}>
+                <a
+                  href={url}
+                  onclick="window.open(this.href,'_blank');return false;"
+                >
+                  {icon}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>
