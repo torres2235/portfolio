@@ -32,12 +32,9 @@ const Navbar = () => {
             const { id, url, icon } = link;
             return (
               <li key={id}>
-                <a
-                  href={url}
-                  onclick="window.open(this.href,'_blank');return false;"
-                >
+                <Link to={url} target="_blank" rel="noopener noreferrer">
                   {icon}
-                </a>
+                </Link>
               </li>
             );
           })}
