@@ -7,20 +7,25 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 // navbar
 import Navbar from "./components/Navbar";
+// modal
+import Modal from "./components/Modal";
 
 import "./styles/App.css";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Router>
+      <Modal />
+    </>
   );
 }
 
