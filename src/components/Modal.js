@@ -1,6 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "../context/context";
 import { FaTimes } from "react-icons/fa";
+
 const Modal = () => {
   const { isModalOpen, closeModal } = useGlobalContext();
   return (

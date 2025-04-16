@@ -1,14 +1,18 @@
 import React from "react";
 import { useGlobalContext } from "../context/context";
+import Draggable from "react-draggable";
 
 const Home = () => {
   const { openModal } = useGlobalContext();
+
   return (
     <main>
-      <div>
-        <h1>Home Page</h1>
-        <p>Welcome :)</p>
-      </div>
+      <Draggable>
+        <div>
+          <h1>Home Page</h1>
+          <p>Welcome :)</p>
+        </div>
+      </Draggable>
 
       <button className="btn" onClick={openModal}>
         show modal

@@ -10,8 +10,6 @@ import Navbar from "./components/Navbar";
 // modal
 import Modal from "./components/Modal";
 
-import "./styles/App.css";
-
 function App() {
   return (
     <>
