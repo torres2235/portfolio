@@ -3,21 +3,60 @@ import React, { useState, useContext } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  /*
+  =============== 
+  About Window
+  ===============
+  */
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const openAbout = () => {
+    setIsAboutOpen(true);
   };
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const closeAbout = () => {
+    setIsAboutOpen(false);
+  };
+
+  /*
+  =============== 
+  Links Window
+  ===============
+  */
+  const [isLinksOpen, setIsLinksOpen] = useState(false);
+
+  const openLinks = () => {
+    setIsLinksOpen(true);
+  };
+  const closeLinks = () => {
+    setIsLinksOpen(false);
+  };
+
+  /*
+  =============== 
+  Contact Window
+  ===============
+  */
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  const openContact = () => {
+    setIsContactOpen(true);
+  };
+  const closeContact = () => {
+    setIsContactOpen(false);
   };
 
   return (
     <AppContext.Provider
       value={{
-        isModalOpen,
-        openModal,
-        closeModal,
+        isAboutOpen,
+        openAbout,
+        closeAbout,
+        isContactOpen,
+        openContact,
+        closeContact,
+        isLinksOpen,
+        openLinks,
+        closeLinks,
       }}
     >
       {children}

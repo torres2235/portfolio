@@ -2,7 +2,7 @@
 import { useGlobalContext } from "../context/context";
 
 const Home = () => {
-  const { openModal } = useGlobalContext();
+  const { openAbout, openContact, openLinks } = useGlobalContext();
 
   return (
     <>
@@ -11,8 +11,14 @@ const Home = () => {
         <p>Welcome :)</p>
       </div>
 
-      <button className="btn" onClick={openModal}>
-        show modal
+      <button className="btn" onClick={openAbout}>
+        About
+      </button>
+      <button className="btn" onClick={openLinks}>
+        Links
+      </button>
+      <button className="btn" onClick={openContact}>
+        Contact Me
       </button>
     </>
   );

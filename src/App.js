@@ -8,7 +8,9 @@ import Error from "./components/Error";
 // navbar
 import Navbar from "./components/Navbar";
 // modal
-import Modal from "./components/Modal";
+import AboutMeWindow from "./components/AboutMeWindow";
+import ContactWindow from "./components/ContactWindow";
+import LinksWindow from "./components/LinksWindow";
 
 function App() {
   return (
@@ -22,7 +24,11 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
-      <Modal />
+      <AboutMeWindow />
+      <Router>
+        <LinksWindow />
+      </Router>
+      <ContactWindow />
     </>
   );
 }
