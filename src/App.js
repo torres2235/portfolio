@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 // navbar
 import Navbar from "./components/Navbar";
-// modal
+// windows
 import AboutMeWindow from "./components/AboutMeWindow";
 import ContactWindow from "./components/ContactWindow";
 import LinksWindow from "./components/LinksWindow";
@@ -29,6 +29,9 @@ function App() {
         <LinksWindow />
       </Router>
       <ContactWindow />
+      <div className="flex justify-center items-center h-screen bg-blue-500">
+        <h1 className="text-4xl text-white font-bold">Hello, Tailwind CSS!</h1>
+      </div>
     </>
   );
 }

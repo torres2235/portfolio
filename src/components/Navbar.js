@@ -22,18 +22,12 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="nav-center">
+      <div className="flex">
         <div className="nav-header">
           <img src={logo} style={{ width: "4rem" }} alt="logo" />
-          <button
-            className="nav-toggle"
-            onClick={() => setShowLinks(!showLinks)}
-          >
-            <FaBars />
-          </button>
         </div>
         <div className="links-container" ref={linksContainerRef}>
-          <ul className="links" ref={linksRef}>
+          <ul className="flex flex-row" ref={linksRef}>
             {links.map((link) => {
               const { id, url, text } = link;
               return (
@@ -44,7 +38,7 @@ const Navbar = () => {
             })}
           </ul>
         </div>
-        <ul className="social-icons">
+        <ul className="flex-column">
           {socials.map((link) => {
             const { id, url, icon } = link;
             return (
@@ -56,6 +50,9 @@ const Navbar = () => {
             );
           })}
         </ul>
+        <button className="nav-toggle" onClick={() => setShowLinks(!showLinks)}>
+          <FaBars />
+        </button>
       </div>
     </nav>
   );
