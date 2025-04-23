@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="flex">
+      <div className="flex justify-between bg-black">
         <div className="nav-header">
           <img src={logo} style={{ width: "4rem" }} alt="logo" />
         </div>

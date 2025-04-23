@@ -5,7 +5,11 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx}", "./public/index.html"],
   darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        wallpaper: "url('/assets/wallpaper.jpg')",
+      },
+    },
   },
   plugins: [],
 };

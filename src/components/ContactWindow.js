@@ -8,31 +8,32 @@ const ContactWindow = () => {
   const nodeRef = useRef(null);
 
   return (
-    <Draggable nodeRef={nodeRef} handle=".moveable">
+    <Draggable nodeRef={nodeRef} handle=".cursor-move">
       <div
         ref={nodeRef}
         className={`${
           isContactOpen ? "modal-overlay show-modal" : "modal-overlay"
         }`}
       >
-        <div className="modal-container">
-          <div className="moveable">
+        <div className="bg-gray-500 border-black border-2 h-auto w-2/5">
+          <div className="flex flex-row justify-between bg-gray-400 cursor-move ">
             <h3>Contact Me!</h3>
-            <button className="close-modal-btn" onClick={closeContact}>
+            <button className="bg-red-600" onClick={closeContact}>
               <FaTimes></FaTimes>
             </button>
           </div>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
-            corrupti laudantium temporibus maxime dolores adipisci excepturi
-            eaque iure veritatis cumque?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
-            corrupti laudantium temporibus maxime dolores adipisci excepturi
-            eaque iure veritatis cumque?
-          </p>
+          <div className="p-4">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+              corrupti laudantium temporibus maxime dolores adipisci excepturi
+              eaque iure veritatis cumque?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+              corrupti laudantium temporibus maxime dolores adipisci excepturi
+              eaque iure veritatis cumque?
+            </p>
+          </div>
         </div>
       </div>
     </Draggable>

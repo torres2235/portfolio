@@ -1,25 +1,44 @@
-//import { useRef } from "react";
 import { useGlobalContext } from "../context/context";
+// icons
+import noodles from "../assets/icons/noodles.png";
+import link from "../assets/icons/link.png";
+import email from "../assets/icons/email.png";
 
 const Home = () => {
   const { openAbout, openContact, openLinks } = useGlobalContext();
 
   return (
     <>
-      <div>
+      {/* <div>
         <h1>Home Page</h1>
         <p>Welcome :)</p>
-      </div>
+      </div> */}
 
-      <button className="btn" onClick={openAbout}>
-        About
-      </button>
-      <button className="btn" onClick={openLinks}>
-        Links
-      </button>
-      <button className="btn" onClick={openContact}>
-        Contact Me
-      </button>
+      <div className="grid grid-cols-1 gap-6 m-4">
+        <div
+          className="flex flex-col justify-center items-center bg-gray-400 bg-opacity-50 w-20 p-2 rounded-lg cursor-pointer"
+          onClick={openAbout}
+        >
+          <img src={noodles} alt="noodles" />
+          <p className="text-sm">About Me</p>
+        </div>
+
+        <div
+          className="flex flex-col justify-center items-center bg-gray-400 bg-opacity-50 w-20 p-2 rounded-lg cursor-pointer"
+          onClick={openLinks}
+        >
+          <img src={link} alt="link" />
+          <p className="text-sm">Links</p>
+        </div>
+
+        <div
+          className="flex flex-col justify-center items-center bg-gray-400 bg-opacity-50 w-20 p-2 rounded-lg cursor-pointer"
+          onClick={openContact}
+        >
+          <img src={email} alt="email" />
+          <p className="text-sm text-center">Contact Me</p>
+        </div>
+      </div>
     </>
   );
 };
