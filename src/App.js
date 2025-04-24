@@ -12,7 +12,7 @@ import AboutMeWindow from "./components/AboutMeWindow";
 import ContactWindow from "./components/ContactWindow";
 import LinksWindow from "./components/LinksWindow";
 
-import wallpaper from "./assets/backgrounds/wallpaper3.gif";
+import wallpaper from "./assets/backgrounds/wallpaper4.gif";
 
 function App() {
   return (
@@ -34,9 +34,6 @@ function App() {
         <LinksWindow />
       </Router>
       <ContactWindow />
-      {/* <div className="flex justify-center items-center h-screen bg-blue-500">
-        <h1 className="text-4xl text-white font-bold">Hello, Tailwind CSS!</h1>
-      </div> */}
     </main>
   );
 }

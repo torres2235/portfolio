@@ -2,7 +2,7 @@ import { useGlobalContext } from "../context/context";
 // icons
 import noodles from "../assets/icons/noodles.png";
 import link from "../assets/icons/link.png";
-import email from "../assets/icons/email.png";
+import email from "../assets/aconfuseddragon1/mail.png";
 
 const Home = () => {
   const { openAbout, openContact, openLinks } = useGlobalContext();
@@ -36,7 +36,7 @@ const Home = () => {
           onClick={openContact}
         >
           <img src={email} alt="email" />
-          <p className="text-sm text-center">Contact Me</p>
+          <p className="text-sm text-center">Contact</p>
         </div>
       </div>
     </>

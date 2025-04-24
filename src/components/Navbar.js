@@ -10,15 +10,15 @@ const Navbar = () => {
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
 
-  useEffect(() => {
-    // gets us position and size of our element
-    const linksHeight = linksRef.current.getBoundingClientRect().height; // .height means we only extract the height
-    if (showLinks) {
-      linksContainerRef.current.style.height = `${linksHeight}px`;
-    } else {
-      linksContainerRef.current.style.height = "0px";
-    }
-  }, [showLinks]);
+  // useEffect(() => {
+  //   // gets us position and size of our element
+  //   const linksHeight = linksRef.current.getBoundingClientRect().height; // .height means we only extract the height
+  //   if (showLinks) {
+  //     linksContainerRef.current.style.height = `${linksHeight}px`;
+  //   } else {
+  //     linksContainerRef.current.style.height = "0px";
+  //   }
+  // }, [showLinks]);
 
   return (
     <nav>
@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="nav-header">
           <img src={logo} style={{ width: "4rem" }} alt="logo" />
         </div>
-        <div className="links-container" ref={linksContainerRef}>
+        {/* <div className="links-container" ref={linksContainerRef}>
           <ul className="flex flex-row" ref={linksRef}>
             {links.map((link) => {
               const { id, url, text } = link;
@@ -49,7 +49,7 @@ const Navbar = () => {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
         <button className="nav-toggle" onClick={() => setShowLinks(!showLinks)}>
           <FaBars />
         </button>

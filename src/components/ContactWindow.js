@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { useGlobalContext } from "../context/context";
 import { FaTimes } from "react-icons/fa";
+import { FaMinus } from "react-icons/fa";
+import { IoChatbubble } from "react-icons/io5";
 import Draggable from "react-draggable";
 
 const ContactWindow = () => {
@@ -15,12 +17,26 @@ const ContactWindow = () => {
           isContactOpen ? "modal-overlay show-modal" : "modal-overlay"
         }`}
       >
-        <div className="bg-gray-500 border-black border-2 h-auto w-2/5">
-          <div className="flex flex-row justify-between bg-gray-400 cursor-move ">
-            <h3>Contact Me!</h3>
-            <button className="bg-red-600" onClick={closeContact}>
-              <FaTimes></FaTimes>
-            </button>
+        <div className="bg-gray-500 border-blue-400 border-2 rounded-md h-auto w-2/5">
+          <div className="flex flex-row justify-between items-center bg-gray-200 border-blue-400 border-2 rounded-md cursor-move ">
+            <div className="flex flex-row items-center">
+              <IoChatbubble className="text-black ml-1" />
+              <h3 className="ml-1 text-black">Contact Me!</h3>
+            </div>
+            <div className="mt-1 mr-1">
+              <button
+                className="bg-blue-400 h-4 mr-1 rounded-sm"
+                onClick={closeContact}
+              >
+                <FaMinus />
+              </button>
+              <button
+                className="bg-blue-400 h-4 rounded-sm"
+                onClick={closeContact}
+              >
+                <FaTimes />
+              </button>
+            </div>
           </div>
           <div className="p-4">
             <p>
