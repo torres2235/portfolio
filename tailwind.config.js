@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 const { darkMode } = require("tailwindcss/stubs/defaultConfig.stub");
 
 module.exports = {
@@ -6,6 +7,9 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      fontFamily:{
+        minecraft: ['Minecraft'],
+      },
       backgroundImage: {
         wallpaper: "url('/assets/wallpaper.jpg')",
       },

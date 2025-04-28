@@ -1,7 +1,7 @@
 import { useGlobalContext } from "../context/context";
 // icons
-import noodles from "../assets/icons/noodles.png";
-import link from "../assets/icons/link.png";
+import noodles from "../assets/aconfuseddragon1/text_file_2.png";
+import link from "../assets/aconfuseddragon1/this_computer.png";
 import email from "../assets/aconfuseddragon1/mail.png";
 
 const Home = () => {

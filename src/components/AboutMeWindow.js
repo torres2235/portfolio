@@ -22,13 +22,13 @@ const AboutMeWindow = () => {
               <FaTimes></FaTimes>
             </button>
           </div>
-          <div className="p-4">
+          <div className="font-minecraft p-4">
             <p>
               Hello! My name is Joshua Torres, a developer based in Los Angeles
               California.
             </p>
             <p>
-              I love gaming (video, board, card, you name it), rock climbing,
+              I love gaming (video, board, card, you name it), instant noodles, rock climbing,
               reading, puzzles, and my dog Shiloh.
             </p>
             <p>My whole life I've been a consumer, and now I aim to CREATE.</p>
