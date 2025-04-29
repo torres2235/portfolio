@@ -28,8 +28,8 @@ const AboutMeWindow = () => {
               California.
             </p>
             <p>
-              I love gaming (video, board, card, you name it), instant noodles, rock climbing,
-              reading, puzzles, and my dog Shiloh.
+              I love gaming (video, board, card, you name it), instant noodles,
+              rock climbing, reading, puzzles, and my dog Shiloh.
             </p>
             <p>My whole life I've been a consumer, and now I aim to CREATE.</p>
             <p>Thanks for stopping by my little corner of the internet :)</p>

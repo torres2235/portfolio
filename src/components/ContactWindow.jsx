@@ -18,10 +18,10 @@ const ContactWindow = () => {
         }`}
       >
         <div className="bg-gray-500 border-blue-400 border-2 rounded-md h-auto w-2/5">
-          <div className="flex flex-row justify-between items-center bg-gray-200 border-blue-400 border-2 rounded-md cursor-move ">
+          <div className="flex flex-row justify-between items-center bg-gray-200 border-blue-400 border-2 rounded-md cursor-move">
             <div className="flex flex-row items-center">
               <IoChatbubble className="text-black ml-1" />
-              <h3 className="ml-1 text-black">Contact Me!</h3>
+              <h3 className="ml-1 text-black font-minecraft">Contact Me!</h3>
             </div>
             <div className="mt-1 mr-1">
               <button

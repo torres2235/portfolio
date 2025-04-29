@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Draggable from "react-draggable";
 
 import { FaTimes } from "react-icons/fa";
-import { socials } from "../data/links";
+import { socials } from "../data/links.jsx";
 
 const LinksWindow = () => {
   const { isLinksOpen, closeLinks } = useGlobalContext();
