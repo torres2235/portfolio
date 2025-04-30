@@ -16,7 +16,9 @@ const LinksWindow = () => {
     <Draggable nodeRef={nodeRef} handle=".cursor-move">
       <div
         ref={nodeRef}
-        className={`${isLinksOpen ? "show-window" : "collapse"}`}
+        className={`${
+          isLinksOpen ? "show-window visible" : "show-window collapse"
+        }`}
       >
         <div className="bg-gray-500 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100">
           <div className="flex flex-row justify-between items-center bg-gray-200 border-blue-400 border-2 rounded-md cursor-move">
@@ -26,12 +28,15 @@ const LinksWindow = () => {
             </div>
             <div className="mt-1 mr-1">
               <button
-                className="bg-blue-400 h-4 mr-1 rounded-sm"
+                className="bg-blue-400 h-4 mr-1 rounded-sm cursor-pointer"
                 onClick={closeLinks}
               >
                 <FaMinus />
               </button>
-              <button className="bg-blue-400 rounded-sm" onClick={closeLinks}>
+              <button
+                className="bg-blue-400 rounded-sm cursor-pointer"
+                onClick={closeLinks}
+              >
                 <FaTimes />
               </button>
             </div>

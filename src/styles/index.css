@@ -15,7 +15,7 @@
 @layer components {
   /* OPEN/CLOSE MODAL */
   .show-window {
-    @apply absolute visible place-items-center-safe w-2/5;
+    @apply absolute place-items-center-safe w-2/5;
   }
   .window-container {
     @apply place-items-center-safe;

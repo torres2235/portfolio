@@ -13,7 +13,9 @@ const AboutMeWindow = () => {
     <Draggable nodeRef={nodeRef} handle=".cursor-move">
       <div
         ref={nodeRef}
-        className={`${isAboutOpen ? "show-window" : "collapse"}`}
+        className={`${
+          isAboutOpen ? "show-window visible" : "show-window collapse"
+        }`}
       >
         <div className="bg-gray-500 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100">
           <div className="flex flex-row justify-between items-center bg-gray-200 border-blue-400 border-2 rounded-md cursor-move">
@@ -23,12 +25,15 @@ const AboutMeWindow = () => {
             </div>
             <div className="mt-1 mr-1">
               <button
-                className="bg-blue-400 h-4 mr-1 rounded-sm"
+                className="bg-blue-400 h-4 mr-1 rounded-sm cursor-pointer"
                 onClick={closeAbout}
               >
                 <FaMinus />
               </button>
-              <button className="bg-blue-400 rounded-sm" onClick={closeAbout}>
+              <button
+                className="bg-blue-400 rounded-sm cursor-pointer"
+                onClick={closeAbout}
+              >
                 <FaTimes />
               </button>
             </div>
