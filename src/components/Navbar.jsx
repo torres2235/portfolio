@@ -11,10 +11,17 @@ function updateTime() {
   var currentTime = new Date();
   var hours = currentTime.getHours();
   var minutes = currentTime.getMinutes();
+  var secs = currentTime.getSeconds();
   if (minutes < 10) {
     minutes = "0" + minutes;
   }
-  var t_str = hours + ":" + minutes + " ";
+  var t_str = " ";
+  if (secs % 2 === 0) {
+    t_str = hours + " " + minutes + " ";
+  } else {
+    t_str = hours + ":" + minutes + " ";
+  }
+
   if (hours > 11) {
     t_str += "PM";
   } else {
@@ -43,7 +50,7 @@ const Navbar = () => {
         <div className="flex justify-center items-center gap-3">
           <div
             id="clock"
-            className="flex items-center bg-gray-800 rounded-full h-6 pl-2 pr-2 font-mono"
+            className="flex items-center bg-gray-800 rounded-full h-8 pl-2 pr-2 font-mono"
           ></div>
 
           <button
