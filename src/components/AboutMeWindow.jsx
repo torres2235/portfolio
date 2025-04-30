@@ -48,7 +48,7 @@ const AboutMeWindow = () => {
               rock climbing, reading, puzzles, and my dog Shiloh.
             </p>
             <p>My whole life I've been a consumer, and now I aim to CREATE.</p>
-            <p>Thanks for stopping by my little corner of the internet owo</p>
+            <p>Thanks for stopping by my little corner of the internet</p>
           </div>
         </div>
       </div>

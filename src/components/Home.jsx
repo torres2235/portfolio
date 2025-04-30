@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <div className="grid grid-cols-1 gap-6 m-4">
         <div
-          className="flex flex-col justify-center items-center bg-gray-400/50 w-20 p-2 rounded-lg cursor-pointer"
+          className="flex flex-col justify-center items-center bg-gray-400/50 h-20 w-20 p-2 rounded-lg cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-400/100 hover:border-2 hover:border-fuchsia-900"
           onClick={openAbout}
         >
           <img src={profile} alt="profile" />
@@ -19,7 +19,7 @@ const Home = () => {
         </div>
 
         <div
-          className="flex flex-col justify-center items-center bg-gray-400/50 w-20 p-2 rounded-lg cursor-pointer"
+          className="flex flex-col justify-center items-center bg-gray-400/50 h-20 w-20 p-2 rounded-lg cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-400/100 hover:border-2 hover:border-fuchsia-900"
           onClick={openLinks}
         >
           <img src={link} alt="link" />
@@ -27,7 +27,7 @@ const Home = () => {
         </div>
 
         <div
-          className="flex flex-col justify-center items-center bg-gray-400/50 w-20 p-2 rounded-lg cursor-pointer"
+          className="flex flex-col justify-center items-center bg-gray-400/50 h-20 w-20 p-2 rounded-lg cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-400/100 hover:border-2 hover:border-fuchsia-900"
           onClick={openContact}
         >
           <img src={email} alt="email" />
