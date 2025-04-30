@@ -13,11 +13,9 @@ const ContactWindow = () => {
     <Draggable nodeRef={nodeRef} handle=".cursor-move">
       <div
         ref={nodeRef}
-        className={`${
-          isContactOpen ? "modal-overlay show-modal" : "modal-overlay"
-        }`}
+        className={`${isContactOpen ? "show-window" : "collapse"}`}
       >
-        <div className="bg-gray-500 border-blue-400 border-2 rounded-md h-auto w-2/5">
+        <div className="bg-gray-500 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100">
           <div className="flex flex-row justify-between items-center bg-gray-200 border-blue-400 border-2 rounded-md cursor-move">
             <div className="flex flex-row items-center">
               <IoChatbubble className="text-black ml-1" />
@@ -30,10 +28,7 @@ const ContactWindow = () => {
               >
                 <FaMinus />
               </button>
-              <button
-                className="bg-blue-400 h-4 rounded-sm"
-                onClick={closeContact}
-              >
+              <button className="bg-blue-400 rounded-sm" onClick={closeContact}>
                 <FaTimes />
               </button>
             </div>

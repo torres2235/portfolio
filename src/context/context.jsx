@@ -8,7 +8,7 @@ const AppProvider = ({ children }) => {
   About Window
   ===============
   */
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(true);
 
   const openAbout = () => {
     setIsAboutOpen(true);

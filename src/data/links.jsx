@@ -24,12 +24,12 @@ export const socials = [
     id: 1,
     url: "https://www.linkedin.com/in/torres-joshua/",
     text: "LinkedIn",
-    icon: <FaLinkedin />,
+    icon: <FaLinkedin size={70} />,
   },
   {
     id: 2,
     url: "https://github.com/torres2235",
     text: "GitHub",
-    icon: <FaGithub />,
+    icon: <FaGithub size={70} />,
   },
 ];

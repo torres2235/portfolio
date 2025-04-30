@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tailwindcss/utilities";
 
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -13,10 +12,20 @@
   }
 }
 
+@layer components {
+  /* OPEN/CLOSE MODAL */
+  .show-window {
+    @apply absolute visible place-items-center-safe w-2/5;
+  }
+  .window-container {
+    @apply place-items-center-safe;
+  }
+}
+
 @layer base {
   @font-face {
     font-family: "minecraft";
-    src: url("../assets/fonts/Minecraftia-Regular.ttf") format("truetype");
+    src: url("../assets/fonts/Minecraft.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }

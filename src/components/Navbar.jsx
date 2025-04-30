@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 import { links, socials } from "../data/links";
-import logo from "../assets/logo.svg";
+import noodles from "../assets/icons/noodles2.jpg";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -22,9 +22,14 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="flex justify-between bg-black">
+      <div className="flex justify-between bg-black border-b-purple-950 border-b-2">
         <div className="nav-header">
-          <img src={logo} style={{ width: "4rem" }} alt="logo" />
+          <img
+            src={noodles}
+            style={{ width: "4rem" }}
+            alt="logo"
+            className="rounded-full"
+          />
         </div>
         {/* <div className="links-container" ref={linksContainerRef}>
           <ul className="flex flex-row" ref={linksRef}>
