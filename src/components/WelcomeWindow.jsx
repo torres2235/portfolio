@@ -15,7 +15,7 @@ const AboutMeWindow = () => {
         ref={nodeRef}
         className={`${
           isWelcomeOpen
-            ? "show-window visible top-50 left-100"
+            ? "show-window visible top-50 left-70"
             : "show-window collapse"
         }`}
       >
@@ -46,13 +46,17 @@ const AboutMeWindow = () => {
               California.
             </p>
             <br />
+            <p>Welcome to my small corner of the internet!</p>
             <p>
-              I love gaming (video, board, card, you name it), instant noodles,
-              rock climbing, reading, puzzles, and my dog Shiloh.
+              Here, you can find infromation about me, my intrests, and any
+              projects I've made/ am making.
             </p>
             <br />
-            <p>My whole life I've been a consumer, and now I aim to CREATE.</p>
-            <p>Thanks for stopping by my little corner of the internet</p>
+            <p>
+              This site will look best on a desktop browser, but you should be
+              able to access the content on mobile.
+            </p>
+            <p>Thanks for checking me out and stopping by :D</p>
           </div>
         </div>
       </div>

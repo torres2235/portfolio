@@ -41,18 +41,7 @@ const AboutMeWindow = () => {
             </div>
           </div>
           <div className="text-xl bg-gray-700 p-2 border-blue-400 border-2 m-1 -mt-0.5 rounded-sm">
-            <p>
-              Hello! My name is Joshua Torres, a developer based in Los Angeles,
-              California.
-            </p>
-            <br />
-            <p>
-              I love gaming (video, board, card, you name it), instant noodles,
-              rock climbing, reading, puzzles, and my dog Shiloh.
-            </p>
-            <br />
-            <p>My whole life I've been a consumer, and now I aim to CREATE.</p>
-            <p>Thanks for stopping by my little corner of the internet</p>
+            <p>test text</p>
           </div>
         </div>
       </div>

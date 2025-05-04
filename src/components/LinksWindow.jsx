@@ -18,7 +18,7 @@ const LinksWindow = () => {
         ref={nodeRef}
         className={`${
           isLinksOpen
-            ? "show-window visible top-70 left-200"
+            ? "show-window visible top-90 left-200"
             : "show-window collapse"
         }`}
       >
@@ -43,7 +43,7 @@ const LinksWindow = () => {
               </button>
             </div>
           </div>
-          <ul className="social-icons text-xl bg-gray-700 p-2 border-blue-400 border-2 m-1 -mt-0.5 rounded-sm">
+          <ul className="flex social-icons text-xl bg-gray-700 p-2 border-blue-400 border-2 m-1 -mt-0.5 rounded-sm gap-10">
             {socials.map((link) => {
               const { id, url, text, icon } = link;
               return (
