@@ -17,31 +17,33 @@ const LinksWindow = () => {
       <div
         ref={nodeRef}
         className={`${
-          isLinksOpen ? "show-window visible" : "show-window collapse"
+          isLinksOpen
+            ? "show-window visible top-70 left-200"
+            : "show-window collapse"
         }`}
       >
-        <div className="bg-gray-500 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100">
-          <div className="flex flex-row justify-between items-center bg-gray-200 border-blue-400 border-2 rounded-md cursor-move">
-            <div className="flex flex-row items-center">
-              <FaProjectDiagram className="text-black ml-1" />
-              <h3 className="ml-1 text-black font-minecraft">Links</h3>
+        <div className="bg-gray-200 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100">
+          <div className="flex flex-row justify-between items-center rounded-md cursor-move ml-1 mr-1">
+            <div className="text-black flex flex-row items-center">
+              <FaProjectDiagram className="ml-1" />
+              <h3 className="ml-1 font-minecraft">Links</h3>
             </div>
             <div className="mt-1 mr-1">
               <button
-                className="bg-blue-400 h-4 mr-1 rounded-sm cursor-pointer"
+                className="bg-blue-400 h-4 mr-1 rounded-sm cursor-pointer transition duration-300 ease-in-out hover:scale-110 hover:bg-amber-400"
                 onClick={closeLinks}
               >
                 <FaMinus />
               </button>
               <button
-                className="bg-blue-400 rounded-sm cursor-pointer"
+                className="bg-blue-400 rounded-sm cursor-pointer transition duration-300 ease-in-out hover:scale-110 hover:bg-red-700"
                 onClick={closeLinks}
               >
                 <FaTimes />
               </button>
             </div>
           </div>
-          <ul className="social-icons p-4">
+          <ul className="social-icons text-xl bg-gray-700 p-2 border-blue-400 border-2 m-1 -mt-0.5 rounded-sm">
             {socials.map((link) => {
               const { id, url, text, icon } = link;
               return (

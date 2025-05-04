@@ -15,24 +15,24 @@
 @layer components {
   /* OPEN/CLOSE MODAL */
   .show-window {
-    @apply absolute place-items-center-safe w-2/5;
+    @apply absolute place-items-center-safe;
   }
   .window-container {
-    @apply place-items-center-safe;
+    @apply place-items-center-safe w-screen h-screen;
   }
 }
 
 @layer base {
   @font-face {
-    font-family: "minecraft";
-    src: url("../assets/fonts/Minecraft.ttf") format("truetype");
+    font-family: "pixel";
+    src: url("../assets/fonts/PixelifySans-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 }
 
 @theme {
-  --font-minecraft: minecraft, sans-serif;
+  --font-pixel: pixel, sans-serif;
 
   --breakpoint-3xl: 1220px;
 

@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="flex justify-between bg-black border-b-fuchsia-900 border-b-2 pt-0.5 pb-0.5 pr-5 pl-5">
+      <div className="flex justify-between bg-black border-b-blue-500 border-b-2 pt-0.5 pb-0.5 pr-5 pl-5">
         <div className="nav-header">
           <img
             src={noodles}
@@ -58,7 +58,7 @@ const Navbar = () => {
               <FaBatteryThreeQuarters />
               <HiSpeakerWave />
             </div>
-            <div id="clock"></div>
+            <div id="clock" />
           </div>
 
           <button
