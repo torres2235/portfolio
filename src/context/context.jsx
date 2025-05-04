@@ -5,10 +5,24 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   /*
   =============== 
+  Welcome Window
+  ===============
+  */
+  const [isWelcomeOpen, setIsWelcomeOpen] = useState(true);
+
+  const openWelcome = () => {
+    setIsWelcomeOpen(true);
+  };
+  const closeWelcome = () => {
+    setIsWelcomeOpen(false);
+  };
+
+  /*
+  =============== 
   About Window
   ===============
   */
-  const [isAboutOpen, setIsAboutOpen] = useState(true);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const openAbout = () => {
     setIsAboutOpen(true);
@@ -48,6 +62,9 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
+        isWelcomeOpen,
+        openWelcome,
+        closeWelcome,
         isAboutOpen,
         openAbout,
         closeAbout,

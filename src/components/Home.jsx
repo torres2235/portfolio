@@ -1,15 +1,24 @@
 import { useGlobalContext } from "../context/context";
 // icons
+import world from "../assets/aconfuseddragon1/world.png";
 import profile from "../assets/aconfuseddragon1/text_file_2.png";
 import link from "../assets/aconfuseddragon1/this_computer.png";
 import email from "../assets/aconfuseddragon1/mail.png";
 
 const Home = () => {
-  const { openAbout, openContact, openLinks } = useGlobalContext();
+  const { openWelcome, openAbout, openContact, openLinks } = useGlobalContext();
 
   return (
     <>
       <div className="grid grid-cols-1 gap-6 m-4">
+        <div
+          className="flex flex-col justify-center items-center bg-gray-400/50 h-20 w-20 p-2 rounded-lg cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-400/100 hover:border-2 hover:border-fuchsia-900"
+          onClick={openWelcome}
+        >
+          <img src={world} alt="world" />
+          <p className="text-sm">Welcome</p>
+        </div>
+
         <div
           className="flex flex-col justify-center items-center bg-gray-400/50 h-20 w-20 p-2 rounded-lg cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-400/100 hover:border-2 hover:border-fuchsia-900"
           onClick={openAbout}

@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 // windows
+import WelcomeWindow from "./components/WelcomeWindow";
 import AboutMeWindow from "./components/AboutMeWindow";
 import LinksWindow from "./components/LinksWindow";
 import ContactWindow from "./components/ContactWindow";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
+      <WelcomeWindow />
       <AboutMeWindow />
       <Router>
         <LinksWindow />
