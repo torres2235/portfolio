@@ -1,12 +1,12 @@
 import { useRef } from "react";
-import { useGlobalContext } from "../context/context";
+import { useGlobalContext } from "../../context/context";
 import { FaTimes } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
-import { FaTags } from "react-icons/fa";
+import { FaFolderOpen } from "react-icons/fa";
 import Draggable from "react-draggable";
 
-const CreditsWindow = () => {
-  const { isCreditsOpen, closeCredits } = useGlobalContext();
+const ProjectsWindow = () => {
+  const { isProjectsOpen, closeProjects } = useGlobalContext();
   const nodeRef = useRef(null);
 
   return (
@@ -14,7 +14,7 @@ const CreditsWindow = () => {
       <div
         ref={nodeRef}
         className={`${
-          isCreditsOpen
+          isProjectsOpen
             ? "show-window visible top-80 left-100"
             : "show-window collapse top-0 left-0"
         }`}
@@ -22,19 +22,19 @@ const CreditsWindow = () => {
         <div className="bg-gray-200 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100">
           <div className="flex flex-row justify-between items-center rounded-md cursor-move ml-1 mr-1">
             <div className="text-black flex flex-row items-center">
-              <FaTags className="ml-1" />
-              <h3 className="ml-1 font-minecraft">Credits</h3>
+              <FaFolderOpen className="ml-1" />
+              <h3 className="ml-1 font-minecraft">Projects</h3>
             </div>
             <div className="mt-1 mr-1">
               <button
                 className="bg-blue-400 h-4 mr-1 rounded-sm cursor-pointer transition duration-300 ease-in-out hover:scale-110 hover:bg-amber-400"
-                onClick={closeCredits}
+                onClick={closeProjects}
               >
                 <FaMinus />
               </button>
               <button
                 className="bg-blue-400 rounded-sm cursor-pointer transition duration-300 ease-in-out hover:scale-110 hover:bg-red-700"
-                onClick={closeCredits}
+                onClick={closeProjects}
               >
                 <FaTimes />
               </button>
@@ -49,4 +49,4 @@ const CreditsWindow = () => {
   );
 };
 
-export default CreditsWindow;
+export default ProjectsWindow;

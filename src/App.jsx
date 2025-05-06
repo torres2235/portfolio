@@ -5,14 +5,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 // pages
 import Home from "./components/Home";
-import Contact from "./components/Contact";
+import Error from "./components/Error";
 // windows
-import WelcomeWindow from "./components/WelcomeWindow";
-import AboutMeWindow from "./components/AboutMeWindow";
-import ProjectsWindow from "./components/ProjectsWindow";
-import LinksWindow from "./components/LinksWindow";
-import ContactWindow from "./components/ContactWindow";
-import CreditsWindow from "./components/CreditsWindow";
+import WelcomeWindow from "./components/windowComponents/WelcomeWindow";
+import AboutMeWindow from "./components/windowComponents/AboutMeWindow";
+import ProjectsWindow from "./components/windowComponents/ProjectsWindow";
+import LinksWindow from "./components/windowComponents/LinksWindow";
+import ContactWindow from "./components/windowComponents/ContactWindow";
+import CreditsWindow from "./components/windowComponents/CreditsWindow";
 
 import wallpaper from "./assets/backgrounds/wallpaper4.gif";
 
@@ -22,13 +22,15 @@ function App() {
       className="w-screen h-screen no-scrollbar bg-cover bg-center bg-no-repeat text-white font-pixel"
       style={{ backgroundImage: `url(${wallpaper})` }}
     >
+      <Navbar />
+
       <Router>
-        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/error" element={<Error />} />
         </Routes>
       </Router>
+
       <WelcomeWindow />
       <AboutMeWindow />
       <ProjectsWindow />
@@ -36,7 +38,9 @@ function App() {
         <LinksWindow />
       </Router>
       <ContactWindow />
-      <CreditsWindow />
+      <Router>
+        <CreditsWindow />
+      </Router>
     </main>
   );
 }

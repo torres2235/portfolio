@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useGlobalContext } from "../context/context";
+import { useGlobalContext } from "../../context/context";
 import { FaTimes } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 import { IoChatbubble } from "react-icons/io5";
