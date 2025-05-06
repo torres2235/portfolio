@@ -26,11 +26,14 @@ const LinksWindow = () => {
           icon={<FaProjectDiagram className="ml-1" />}
           windowName={"Links"}
         >
-          <ul className="flex gap-10">
+          <ul className="grid grid-cols-1 gap-5">
             {socials.map((link) => {
               const { id, url, text, icon } = link;
               return (
-                <li key={id}>
+                <li
+                  key={id}
+                  className="flex justify-center items-center text-center"
+                >
                   <Link to={url} target="_blank" rel="noopener noreferrer">
                     {icon}
                     {text}

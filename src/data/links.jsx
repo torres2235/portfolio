@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaSteam } from "react-icons/fa";
 
 export const links = [
   {
@@ -31,5 +31,17 @@ export const socials = [
     url: "https://github.com/torres2235",
     text: "GitHub",
     icon: <FaGithub size={70} />,
+  },
+  {
+    id: 3,
+    url: "https://www.instagram.com/torresdejoshua/",
+    text: "Instagram",
+    icon: <FaInstagram size={70} />,
+  },
+  {
+    id: 4,
+    url: "https://steamcommunity.com/profiles/76561198044571990/",
+    text: "Steam",
+    icon: <FaSteam size={70} />,
   },
 ];
