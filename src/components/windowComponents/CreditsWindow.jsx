@@ -24,14 +24,42 @@ const CreditsWindow = () => {
           icon={<FaTags className="ml-1" />}
           windowName={"Credits"}
         >
-          <div>
-            <p className="underline">Desktop Icons</p>
+          <div className="flex flex-col">
+            <p className="underline">Icons</p>
             <a
               href="https://aconfuseddragon.itch.io/windows-95-plus-1"
               target="_blank"
               rel="noopener noreferrer"
             >
               aconfuseddragon's 𝕎𝕚𝕟𝕕𝕠𝕨𝕤 𝟡𝟝 +𝓟𝓛𝓤𝓢+ Icon Pack #1
+            </a>
+            <a
+              href="https://react-icons.github.io/react-icons/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              React Icons
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icon/noodles_7534440?term=noodle&page=1&position=34&origin=search&related_id=7534440"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Noodles Icon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icon/sun_12414617?term=pixel+sun&page=4&position=7&origin=search&related_id=12414617"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pixel Sun Icon
+            </a>
+            <a
+              href="https://www.flaticon.com/free-icon/full-moon_12414720?term=pixel+moon&page=1&position=1&origin=search&related_id=12414720"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pixel Moon Icon
             </a>
           </div>
           <div className="flex flex-col">
@@ -41,7 +69,7 @@ const CreditsWindow = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Polygon.dev
+              Pollygon.dev
             </a>
             <a
               href="https://www.sharyap.com/"
