@@ -19,7 +19,7 @@ import wallpaper from "./assets/backgrounds/wallpaper4.gif";
 function App() {
   return (
     <main
-      className="w-screen h-screen no-scrollbar bg-cover bg-center bg-no-repeat text-white font-pixel"
+      className="w-screen h-screen overscroll-none no-scrollbar bg-cover bg-center bg-no-repeat text-white font-pixel"
       style={{ backgroundImage: `url(${wallpaper})` }}
     >
       <Navbar />

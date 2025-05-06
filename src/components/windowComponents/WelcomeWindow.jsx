@@ -36,8 +36,8 @@ const WelcomeWindow = () => {
           </p>
           <br />
           <p>
-            This site will look best on a desktop browser, but you should be
-            able to access the content on mobile.
+            This site is made for a desktop broswer view, but I'm in the process
+            of making it work for mobile!
           </p>
           <p>Thanks for checking me out and stopping by :D</p>
         </Window>

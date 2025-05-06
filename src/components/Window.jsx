@@ -4,7 +4,7 @@ import { FaMinus } from "react-icons/fa";
 
 const Window = ({ closeContext, icon, windowName, children }) => {
   return (
-    <div className="bg-gray-200 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100 w-full">
+    <div className="bg-gray-200 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100 size-full">
       <div className="flex flex-row justify-between items-center rounded-md cursor-move ml-1 mr-1">
         <div className="text-black flex flex-row items-center">
           {icon}

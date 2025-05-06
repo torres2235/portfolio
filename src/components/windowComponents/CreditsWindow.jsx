@@ -15,7 +15,7 @@ const CreditsWindow = () => {
         ref={nodeRef}
         className={`${
           isCreditsOpen
-            ? "show-window visible top-30 left-250 w-1/3"
+            ? "show-window visible top-30 right-100 w-1/3"
             : "show-window collapse top-0 left-0"
         }`}
       >
