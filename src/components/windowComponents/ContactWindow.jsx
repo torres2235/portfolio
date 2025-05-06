@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { useGlobalContext } from "../../context/context";
-import { FaTimes } from "react-icons/fa";
-import { FaMinus } from "react-icons/fa";
-import { IoChatbubble } from "react-icons/io5";
 import Draggable from "react-draggable";
+import { IoChatbubble } from "react-icons/io5";
+
+import Window from "../Window";
 
 const ContactWindow = () => {
   const { isContactOpen, closeContact } = useGlobalContext();
@@ -15,67 +15,50 @@ const ContactWindow = () => {
         ref={nodeRef}
         className={`${
           isContactOpen
-            ? "show-window visible top-100 left-80"
+            ? "show-window visible top-120 left-30 w-1/4"
             : "show-window collapse top-0 left-0"
         }`}
       >
-        <div className="bg-gray-200 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100  w-xl">
-          <div className="flex flex-row justify-between items-center rounded-md cursor-move ml-1 mr-1">
-            <div className="text-black flex flex-row items-center">
-              <IoChatbubble className="ml-1" />
-              <h3 className="ml-1 font-minecraft">Contact Me!</h3>
-            </div>
-            <div className="mt-1 mr-1">
-              <button
-                className="bg-blue-400 h-4 mr-1 rounded-sm cursor-pointer transition duration-300 ease-in-out hover:scale-110 hover:bg-amber-400"
-                onClick={closeContact}
-              >
-                <FaMinus />
-              </button>
-              <button
-                className="bg-blue-400 rounded-sm cursor-pointer transition duration-300 ease-in-out hover:scale-110 hover:bg-red-700"
-                onClick={closeContact}
-              >
-                <FaTimes />
-              </button>
-            </div>
-          </div>
-          <div className="text-xl bg-gray-700 border-blue-400 border-2 m-1 -mt-0.5 rounded-sm p-2 max-h-150 overflow-y-auto">
-            <form class="p-4 md:p-5">
-              <div class="grid gap-4 mb-4 grid-cols-2">
-                <div class="col-span-2">
-                  <label
-                    for="name"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                    placeholder="Your name here"
-                    required=""
-                  />
-                </div>
-                <div class="col-span-2">
-                  <label
-                    for="email"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                    placeholder="your@email.com"
-                    required=""
-                  />
-                </div>
-                {/* <div class="col-span-2 sm:col-span-1">
+        <Window
+          closeContext={closeContact}
+          icon={<IoChatbubble className="ml-1" />}
+          windowName={"Contact Me"}
+        >
+          <form class="p-4 md:p-5">
+            <div class="grid gap-4 mb-4 grid-cols-2">
+              <div class="col-span-2">
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="Your name here"
+                  required=""
+                />
+              </div>
+              <div class="col-span-2">
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="your@email.com"
+                  required=""
+                />
+              </div>
+              {/* <div class="col-span-2 sm:col-span-1">
                   <label
                     for="price"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -109,26 +92,26 @@ const ContactWindow = () => {
                     <option value="PH">Phones</option>
                   </select>
                 </div> */}
-                <div class="col-span-2">
-                  <label
-                    for="message"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows="4"
-                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Type your msg here . . ."
-                  ></textarea>
-                </div>
+              <div class="col-span-2">
+                <label
+                  for="message"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Type your msg here . . ."
+                ></textarea>
               </div>
-              <button
-                type="submit"
-                class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                {/* <svg
+            </div>
+            <button
+              type="submit"
+              class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              {/* <svg
                   class="me-1 -ms-1 w-5 h-5"
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -140,11 +123,10 @@ const ContactWindow = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg> */}
-                Send
-              </button>
-            </form>
-          </div>
-        </div>
+              Send
+            </button>
+          </form>
+        </Window>
       </div>
     </Draggable>
   );

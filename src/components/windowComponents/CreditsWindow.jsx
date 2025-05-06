@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { useGlobalContext } from "../../context/context";
-import { FaTimes } from "react-icons/fa";
-import { FaMinus } from "react-icons/fa";
 import { FaTags } from "react-icons/fa";
 import Draggable from "react-draggable";
+
+import Window from "../Window";
 
 const CreditsWindow = () => {
   const { isCreditsOpen, closeCredits } = useGlobalContext();
@@ -15,35 +15,41 @@ const CreditsWindow = () => {
         ref={nodeRef}
         className={`${
           isCreditsOpen
-            ? "show-window visible top-80 left-100"
+            ? "show-window visible top-30 left-250 w-1/3"
             : "show-window collapse top-0 left-0"
         }`}
       >
-        <div className="bg-gray-200 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100">
-          <div className="flex flex-row justify-between items-center rounded-md cursor-move ml-1 mr-1">
-            <div className="text-black flex flex-row items-center">
-              <FaTags className="ml-1" />
-              <h3 className="ml-1 font-minecraft">Credits</h3>
-            </div>
-            <div className="mt-1 mr-1">
-              <button
-                className="bg-blue-400 h-4 mr-1 rounded-sm cursor-pointer transition duration-300 ease-in-out hover:scale-110 hover:bg-amber-400"
-                onClick={closeCredits}
-              >
-                <FaMinus />
-              </button>
-              <button
-                className="bg-blue-400 rounded-sm cursor-pointer transition duration-300 ease-in-out hover:scale-110 hover:bg-red-700"
-                onClick={closeCredits}
-              >
-                <FaTimes />
-              </button>
-            </div>
-          </div>
-          <div className="text-xl bg-gray-700 p-2 border-blue-400 border-2 m-1 -mt-0.5 rounded-sm">
-            <p>test text</p>
-          </div>
-        </div>
+        <Window
+          closeContext={closeCredits}
+          icon={<FaTags className="ml-1" />}
+          windowName={"Credits"}
+        >
+          <p className="h-1/6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            placeat unde dolorem vero, tenetur animi, reiciendis provident sequi
+            necessitatibus laborum quas sapiente ab odio nulla a delectus.
+            Eligendi, iusto. Et, quidem inventore fuga similique nisi corrupti
+            accusamus delectus eligendi sed repellat alias cum excepturi veniam
+            harum sequi corporis atque, nemo, deserunt quibusdam doloremque.
+            Consequatur nemo fuga error, ex eos quae ad et, reiciendis,
+            reprehenderit nam harum deserunt consectetur! Sint dolor accusantium
+            repellendus veritatis aperiam fuga magni corporis tenetur et magnam,
+            alias exercitationem explicabo culpa, eius nulla aliquid nesciunt
+            atque quidem dignissimos blanditiis repellat quasi est saepe? Earum
+            debitis magnam reiciendis velit quia suscipit distinctio aut,
+            quibusdam ut maiores nesciunt fugiat aspernatur saepe architecto
+            facere molestiae voluptatibus sed unde ex! Iure, sequi? Suscipit
+            velit tempore doloremque, aspernatur vel necessitatibus. Sunt rerum
+            id deserunt tenetur. Nemo pariatur quos aliquid maiores iste
+            praesentium. Aliquam blanditiis odio ex praesentium ut sapiente,
+            perferendis neque quae et voluptas excepturi ipsum modi, ea, iusto
+            libero? Ratione placeat aut sequi praesentium ipsam repudiandae
+            iure, eveniet recusandae consequuntur aspernatur pariatur magni
+            dicta veniam modi maxime aliquid alias quidem dolor nihil nesciunt
+            molestias nemo eius architecto id? Nulla rerum repellendus adipisci
+            cumque autem dolore libero mollitia, suscipit inventore vel in!
+          </p>
+        </Window>
       </div>
     </Draggable>
   );
