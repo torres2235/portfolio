@@ -9,15 +9,17 @@ import Contact from "./components/Contact";
 // windows
 import WelcomeWindow from "./components/WelcomeWindow";
 import AboutMeWindow from "./components/AboutMeWindow";
+import ProjectsWindow from "./components/ProjectsWindow";
 import LinksWindow from "./components/LinksWindow";
 import ContactWindow from "./components/ContactWindow";
+import CreditsWindow from "./components/CreditsWindow";
 
 import wallpaper from "./assets/backgrounds/wallpaper4.gif";
 
 function App() {
   return (
     <main
-      className="w-screen h-screen overflow-y-scroll no-scrollbar bg-cover bg-center bg-no-repeat text-white font-pixel"
+      className="w-screen h-screen no-scrollbar bg-cover bg-center bg-no-repeat text-white font-pixel"
       style={{ backgroundImage: `url(${wallpaper})` }}
     >
       <Router>
@@ -29,10 +31,12 @@ function App() {
       </Router>
       <WelcomeWindow />
       <AboutMeWindow />
+      <ProjectsWindow />
       <Router>
         <LinksWindow />
       </Router>
       <ContactWindow />
+      <CreditsWindow />
     </main>
   );
 }

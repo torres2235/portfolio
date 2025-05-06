@@ -33,6 +33,20 @@ const AppProvider = ({ children }) => {
 
   /*
   =============== 
+  Projects Window
+  ===============
+  */
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
+
+  const openProjects = () => {
+    setIsProjectsOpen(true);
+  };
+  const closeProjects = () => {
+    setIsProjectsOpen(false);
+  };
+
+  /*
+  =============== 
   Links Window
   ===============
   */
@@ -43,6 +57,20 @@ const AppProvider = ({ children }) => {
   };
   const closeLinks = () => {
     setIsLinksOpen(false);
+  };
+
+  /*
+  =============== 
+  Credits Window
+  ===============
+  */
+  const [isCreditsOpen, setIsCreditsOpen] = useState(false);
+
+  const openCredits = () => {
+    setIsCreditsOpen(true);
+  };
+  const closeCredits = () => {
+    setIsCreditsOpen(false);
   };
 
   /*
@@ -68,12 +96,18 @@ const AppProvider = ({ children }) => {
         isAboutOpen,
         openAbout,
         closeAbout,
-        isContactOpen,
-        openContact,
-        closeContact,
+        isProjectsOpen,
+        openProjects,
+        closeProjects,
         isLinksOpen,
         openLinks,
         closeLinks,
+        isContactOpen,
+        openContact,
+        closeContact,
+        isCreditsOpen,
+        openCredits,
+        closeCredits,
       }}
     >
       {children}

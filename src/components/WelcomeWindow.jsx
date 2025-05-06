@@ -5,7 +5,7 @@ import { FaMinus } from "react-icons/fa";
 import { FaRegLaugh } from "react-icons/fa";
 import Draggable from "react-draggable";
 
-const AboutMeWindow = () => {
+const WelcomeWindow = () => {
   const { isWelcomeOpen, closeWelcome } = useGlobalContext();
   const nodeRef = useRef(null);
 
@@ -16,7 +16,7 @@ const AboutMeWindow = () => {
         className={`${
           isWelcomeOpen
             ? "show-window visible top-50 left-70"
-            : "show-window collapse"
+            : "show-window collapse top-0 left-0"
         }`}
       >
         <div className="bg-gray-200 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100">
@@ -64,4 +64,4 @@ const AboutMeWindow = () => {
   );
 };
 
-export default AboutMeWindow;
+export default WelcomeWindow;

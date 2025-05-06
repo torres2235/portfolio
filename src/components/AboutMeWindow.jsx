@@ -16,7 +16,7 @@ const AboutMeWindow = () => {
         className={`${
           isAboutOpen
             ? "show-window visible top-80 left-100"
-            : "show-window collapse"
+            : "show-window collapse top-0 left-0"
         }`}
       >
         <div className="bg-gray-200 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100">
