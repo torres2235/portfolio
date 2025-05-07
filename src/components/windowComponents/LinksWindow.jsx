@@ -30,11 +30,13 @@ const LinksWindow = () => {
             {socials.map((link) => {
               const { id, url, text, icon } = link;
               return (
-                <li
-                  key={id}
-                  className="flex justify-center items-center text-center"
-                >
-                  <Link to={url} target="_blank" rel="noopener noreferrer">
+                <li key={id}>
+                  <Link
+                    to={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex justify-start items-center gap-1"
+                  >
                     {icon}
                     {text}
                   </Link>
