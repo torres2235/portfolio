@@ -17,7 +17,7 @@ const AboutMeWindow = () => {
         ref={nodeRef}
         className={`${
           isAboutOpen
-            ? "show-window visible top-60 left-100 w-3/7 max-h-1/2"
+            ? "show-window visible top-60 left-100 w-3/7 h-3/5"
             : "show-window collapse top-0 left-0"
         }`}
       >
@@ -25,10 +25,9 @@ const AboutMeWindow = () => {
           closeContext={closeAbout}
           icon={<FaChild className="ml-1" />}
           windowName={"About Me"}
-          className="overflow-auto"
         >
-          <div className="h-1/3">
-            <div className="flex flex-row justify-center items-center gap-10">
+          <div className="h-fit overflow-auto">
+            <div className="flex flex-row justify-center items-center gap-10 pb-4">
               <img
                 src={profile}
                 alt="picture"
@@ -42,7 +41,7 @@ const AboutMeWindow = () => {
               </div>
             </div>
             <div>
-              <div className="pb-4">
+              <div className="bg-gray-600 pb-4">
                 <h3>HI! I'm Josh and I...</h3>
                 <ul>
                   <li>Fuck shit up</li>
@@ -50,7 +49,7 @@ const AboutMeWindow = () => {
                   <li>Question my life choices</li>
                 </ul>
               </div>
-              <div className="bg-gray-600 pb-4">
+              <div className="pb-4">
                 <h3 className="underline">Education:</h3>
                 <div className="flex justify-around items-center">
                   <div>
@@ -71,7 +70,7 @@ const AboutMeWindow = () => {
                   />
                 </div>
               </div>
-              <div className="pb-4">
+              <div className="bg-gray-600 pb-4">
                 <h3 className="underline">Other Intrests:</h3>
                 <ul>
                   <li>Indoor Bouldering/ Rock Climbing 🧗‍♂️</li>

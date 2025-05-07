@@ -15,7 +15,7 @@ const WelcomeWindow = () => {
         ref={nodeRef}
         className={`${
           isWelcomeOpen
-            ? "show-window visible top-50 left-70"
+            ? "show-window visible top-50 left-70 w-1/2"
             : "show-window collapse top-0 left-0"
         }`}
       >
