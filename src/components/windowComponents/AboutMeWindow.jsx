@@ -43,7 +43,7 @@ const AboutMeWindow = () => {
             <div>
               <div className="bg-gray-600 pb-4">
                 <h3>HI! I'm Josh and I...</h3>
-                <ul>
+                <ul className="list-disc pl-8">
                   <li>Fuck shit up</li>
                   <li>Get hella money</li>
                   <li>Question my life choices</li>
@@ -72,7 +72,7 @@ const AboutMeWindow = () => {
               </div>
               <div className="bg-gray-600 pb-4">
                 <h3 className="underline">Other Intrests:</h3>
-                <ul>
+                <ul className="list-disc pl-8">
                   <li>Indoor Bouldering/ Rock Climbing 🧗‍♂️</li>
                   <li>Gaming (video, board, card, you name it!) 🎮</li>
                   <li>Reading 📚</li>

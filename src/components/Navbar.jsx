@@ -41,21 +41,22 @@ const Navbar = () => {
   return (
     <nav>
       <div className="flex justify-between bg-black border-b-blue-500 border-b-2 pt-0.5 pb-0.5 pr-5 pl-5">
-        <div className="flex flex-row items-center gap">
+        <div className="flex flex-row items-center gap-2">
           <img
             src={noodles}
             style={{ width: "3rem" }}
             alt="logo"
             className="hover:animate-spin"
           />
+
           <div className={`${isWelcomeOpen ? "visible" : "collapse"}`}>
-            <p className="text-white">Welcome</p>
+            <p className="text-white bg-gray-700 rounded-md p-1">Welcome</p>
           </div>
           <div className={`${isAboutOpen ? "visible" : "collapse"}`}>
-            <p className="text-white">About Me</p>
+            <p className="text-white bg-gray-700 rounded-md p-1">About Me</p>
           </div>
           <div className={`${isProjectsOpen ? "visible" : "collapse"}`}>
-            <p className="text-white">Projects</p>
+            <p className="text-white bg-gray-700 rounded-md p-1">Projects</p>
           </div>
         </div>
 
