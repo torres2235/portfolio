@@ -17,7 +17,7 @@ const LinksWindow = () => {
         ref={nodeRef}
         className={`${
           isLinksOpen
-            ? "show-window visible top-20 right-50"
+            ? "show-window visible top-20 right-50 z-auto"
             : "show-window collapse top-0 left-0"
         }`}
       >

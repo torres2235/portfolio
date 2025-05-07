@@ -15,9 +15,12 @@ const WelcomeWindow = () => {
         ref={nodeRef}
         className={`${
           isWelcomeOpen
-            ? "show-window visible top-50 left-70 w-1/2"
+            ? "show-window visible top-50 left-70 w-1/2 active:z-60 z-auto"
             : "show-window collapse top-0 left-0"
         }`}
+        data-dialog-mount="{opacity-100}"
+        data-dialog-unmount="{opacity-0}"
+        data-dialog-transition="{transition-opacity}"
       >
         <Window
           closeContext={closeWelcome}
@@ -39,7 +42,7 @@ const WelcomeWindow = () => {
             This site is made for a desktop broswer view, but I'm in the process
             of making it work for mobile!
           </p>
-          <p>Thanks for checking me out and stopping by :D</p>
+          <p>Thanks for checking me out and stopping by (●'◡'●)</p>
         </Window>
       </div>
     </Draggable>
