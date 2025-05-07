@@ -15,12 +15,9 @@ const WelcomeWindow = () => {
         ref={nodeRef}
         className={`${
           isWelcomeOpen
-            ? "show-window visible top-50 left-70 w-1/2 active:z-60 z-auto"
+            ? "show-window visible top-50 left-70 w-1/2 active:z-60"
             : "show-window collapse top-0 left-0"
         }`}
-        data-dialog-mount="{opacity-100}"
-        data-dialog-unmount="{opacity-0}"
-        data-dialog-transition="{transition-opacity}"
       >
         <Window
           closeContext={closeWelcome}

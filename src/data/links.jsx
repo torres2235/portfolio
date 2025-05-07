@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaInstagram, FaSteam } from "react-icons/fa";
+import { BsFillPatchQuestionFill } from "react-icons/bs";
 
 export const links = [
   {
@@ -43,5 +44,11 @@ export const socials = [
     url: "https://steamcommunity.com/profiles/76561198044571990/",
     text: "Steam",
     icon: <FaSteam size={70} />,
+  },
+  {
+    id: 5,
+    url: "https://www.youtube.com/watch?v=msDfRhml9GQ&list=PL0Rb25NUY6frmQpjx8c_amD8ALFyhEd2P&index=1",
+    text: "???",
+    icon: <BsFillPatchQuestionFill size={70} />,
   },
 ];
