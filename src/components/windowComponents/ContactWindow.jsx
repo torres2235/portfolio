@@ -5,12 +5,20 @@ import { IoChatbubble } from "react-icons/io5";
 
 import Window from "../Window";
 
-const ContactWindow = () => {
+const ContactWindow = ({ zIndex, parentClickHandler }) => {
   const { isContactOpen, closeContact } = useGlobalContext();
   const nodeRef = useRef(null);
 
+  function clickHandler() {
+    parentClickHandler();
+  }
+
   return (
-    <Draggable nodeRef={nodeRef} handle=".cursor-move">
+    <Draggable
+      nodeRef={nodeRef}
+      handle=".cursor-move"
+      onMouseDown={clickHandler}
+    >
       <div
         ref={nodeRef}
         className={`${
@@ -18,6 +26,7 @@ const ContactWindow = () => {
             ? "show-window visible top-120 left-30 w-1/4"
             : "show-window collapse top-0 left-0"
         }`}
+        style={{ zIndex: zIndex }}
       >
         <Window
           closeContext={closeContact}

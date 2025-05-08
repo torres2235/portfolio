@@ -5,12 +5,20 @@ import { FaFolderOpen } from "react-icons/fa";
 
 import Window from "../Window";
 
-const ProjectsWindow = () => {
+const ProjectsWindow = ({ zIndex, parentClickHandler }) => {
   const { isProjectsOpen, closeProjects } = useGlobalContext();
   const nodeRef = useRef(null);
 
+  function clickHandler() {
+    parentClickHandler();
+  }
+
   return (
-    <Draggable nodeRef={nodeRef} handle=".cursor-move">
+    <Draggable
+      nodeRef={nodeRef}
+      handle=".cursor-move"
+      onMouseDown={clickHandler}
+    >
       <div
         ref={nodeRef}
         className={`${
@@ -18,6 +26,7 @@ const ProjectsWindow = () => {
             ? "show-window visible top-70 left-110 w-2/3 h-3/5"
             : "show-window collapse top-0 left-0"
         }`}
+        style={{ zIndex: zIndex }}
       >
         <Window
           closeContext={closeProjects}

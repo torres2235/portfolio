@@ -7,12 +7,20 @@ import { FaProjectDiagram } from "react-icons/fa";
 import Window from "../Window.jsx";
 import { socials } from "../../data/links.jsx";
 
-const LinksWindow = () => {
+const LinksWindow = ({ zIndex, parentClickHandler }) => {
   const { isLinksOpen, closeLinks } = useGlobalContext();
   const nodeRef = useRef(null);
 
+  function clickHandler() {
+    parentClickHandler();
+  }
+
   return (
-    <Draggable nodeRef={nodeRef} handle=".cursor-move">
+    <Draggable
+      nodeRef={nodeRef}
+      handle=".cursor-move"
+      onMouseDown={clickHandler}
+    >
       <div
         ref={nodeRef}
         className={`${
@@ -20,6 +28,7 @@ const LinksWindow = () => {
             ? "show-window visible top-20 right-50 z-auto"
             : "show-window collapse top-0 left-0"
         }`}
+        style={{ zIndex: zIndex }}
       >
         <Window
           closeContext={closeLinks}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // navbar
@@ -17,6 +17,29 @@ import CreditsWindow from "./components/windowComponents/CreditsWindow";
 import wallpaper from "./assets/backgrounds/wallpaper4.gif";
 
 function App() {
+  const [componentList, setComponentList] = useState([
+    { id: 0, zIndex: 1 },
+    { id: 1, zIndex: 2 },
+    { id: 2, zIndex: 3 },
+    { id: 3, zIndex: 4 },
+    { id: 4, zIndex: 5 },
+    { id: 5, zIndex: 6 },
+  ]);
+
+  function parentClickHandler(id) {
+    let tmpIndex = componentList.find((item) => item.id === id).zIndex;
+    let newArray = componentList.map((item) => {
+      let newItem = { ...item };
+      if (item.id === id) {
+        newItem.zIndex = componentList.length;
+      } else if (item.zIndex > tmpIndex) {
+        newItem.zIndex -= 1;
+      }
+      return newItem;
+    });
+    setComponentList(newArray);
+  }
+
   return (
     <main
       className="w-screen h-screen overscroll-none no-scrollbar bg-cover bg-center bg-no-repeat text-white font-pixel"
@@ -27,19 +50,43 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/error" element={<Error />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
 
-      <WelcomeWindow />
-      <AboutMeWindow />
-      <ProjectsWindow />
+      <WelcomeWindow
+        key={componentList[0].id}
+        zIndex={componentList[0].zIndex}
+        parentClickHandler={() => parentClickHandler(componentList[0].id)}
+      />
+      <AboutMeWindow
+        key={componentList[1].id}
+        zIndex={componentList[1].zIndex}
+        parentClickHandler={() => parentClickHandler(componentList[1].id)}
+      />
+      <ProjectsWindow
+        key={componentList[2].id}
+        zIndex={componentList[2].zIndex}
+        parentClickHandler={() => parentClickHandler(componentList[2].id)}
+      />
       <Router>
-        <LinksWindow />
+        <LinksWindow
+          key={componentList[3].id}
+          zIndex={componentList[3].zIndex}
+          parentClickHandler={() => parentClickHandler(componentList[3].id)}
+        />
       </Router>
-      <ContactWindow />
+      <ContactWindow
+        key={componentList[4].id}
+        zIndex={componentList[4].zIndex}
+        parentClickHandler={() => parentClickHandler(componentList[4].id)}
+      />
       <Router>
-        <CreditsWindow />
+        <CreditsWindow
+          key={componentList[5].id}
+          zIndex={componentList[5].zIndex}
+          parentClickHandler={() => parentClickHandler(componentList[5].id)}
+        />
       </Router>
     </main>
   );

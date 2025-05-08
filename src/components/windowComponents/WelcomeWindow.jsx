@@ -5,19 +5,28 @@ import { FaRegLaugh } from "react-icons/fa";
 
 import Window from "../Window";
 
-const WelcomeWindow = () => {
+const WelcomeWindow = ({ zIndex, parentClickHandler }) => {
   const { isWelcomeOpen, closeWelcome } = useGlobalContext();
   const nodeRef = useRef(null);
 
+  function clickHandler() {
+    parentClickHandler();
+  }
+
   return (
-    <Draggable nodeRef={nodeRef} handle=".cursor-move">
+    <Draggable
+      nodeRef={nodeRef}
+      handle=".cursor-move"
+      onMouseDown={clickHandler}
+    >
       <div
         ref={nodeRef}
         className={`${
           isWelcomeOpen
-            ? "show-window visible top-50 left-70 w-1/2 active:z-60"
-            : "show-window collapse top-0 left-0"
+            ? "show-window visible top-50 left-70 w-1/2"
+            : "collapse top-0 left-0"
         }`}
+        style={{ zIndex: zIndex }}
       >
         <Window
           closeContext={closeWelcome}

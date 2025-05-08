@@ -7,19 +7,28 @@ import profile from "../../assets/profilepic.jpg";
 import ucr from "../../assets/ucr.jpg";
 import Window from "../Window";
 
-const AboutMeWindow = () => {
+const AboutMeWindow = ({ zIndex, parentClickHandler }) => {
   const { isAboutOpen, closeAbout } = useGlobalContext();
   const nodeRef = useRef(null);
 
+  function clickHandler() {
+    parentClickHandler();
+  }
+
   return (
-    <Draggable nodeRef={nodeRef} handle=".cursor-move">
+    <Draggable
+      nodeRef={nodeRef}
+      handle=".cursor-move"
+      onMouseDown={clickHandler}
+    >
       <div
         ref={nodeRef}
         className={`${
           isAboutOpen
             ? "show-window visible top-60 left-100 w-3/7 h-3/5"
-            : "show-window collapse top-0 left-0"
+            : "collapse top-0 left-0"
         }`}
+        style={{ zIndex: zIndex }}
       >
         <Window
           closeContext={closeAbout}
