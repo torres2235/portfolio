@@ -24,7 +24,7 @@ const ProjectsWindow = ({ zIndex, parentClickHandler }) => {
         ref={nodeRef}
         className={`${
           isProjectsOpen
-            ? "show-window visible top-70 left-110 w-2/3 h-3/5"
+            ? "show-window visible top-70 left-110 w-2/3 h-3/5 z-20"
             : "show-window collapse top-0 left-0"
         }`}
         style={{ zIndex: zIndex }}
@@ -48,11 +48,11 @@ const ProjectsWindow = ({ zIndex, parentClickHandler }) => {
                     Mobile application to help climbers log track their climbs
                   </li>
                   <li>
-                    Designed and developed for cross‑platform usability using
+                    Designed and developed for cross-platform usability using
                     the React Native and Expo frameworks
                   </li>
                   <li>
-                    Integrated Expo Camera API to enable real‑time image capture
+                    Integrated Expo Camera API to enable real-time image capture
                     within the app
                   </li>
                   <li>
@@ -79,7 +79,7 @@ const ProjectsWindow = ({ zIndex, parentClickHandler }) => {
                 </a>
               </div>
             </div>
-            <div className="flex items-center gap-10 pb-4 bg-gray-600 pb-4">
+            <div className="flex items-center gap-10 pb-4 bg-gray-600">
               <div className="flex flex-row">
                 <img
                   src={boulderBuddy}
