@@ -6,7 +6,6 @@
 }
 
 @layer components {
-  /* OPEN/CLOSE MODAL */
   .hide-window {
     @apply absolute collapse;
   }

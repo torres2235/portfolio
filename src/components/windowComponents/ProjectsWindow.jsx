@@ -114,7 +114,7 @@ const ProjectsWindow = ({ zIndex, parentClickHandler }) => {
               <div>
                 <h3>And this website!</h3>
                 <p>
-                  A little cheesy I know, but I'm proud of it and plan on
+                  A little cheesy I know, but I'm proud of it and am planning on
                   continuely add/improve on to it
                 </p>
               </div>

@@ -49,9 +49,9 @@ const AboutMeWindow = ({ zIndex, parentClickHandler }) => {
               <div className="bg-gray-600 pb-4">
                 <h3>HI! I'm Josh and I...</h3>
                 <ul className="list-disc pl-8">
-                  <li>Fuck shit up</li>
-                  <li>Get hella money</li>
-                  <li>Question my life choices</li>
+                  <li>do frontend web development,</li>
+                  <li>app development,</li>
+                  <li>and dabble in UI/UX design!</li>
                 </ul>
               </div>
               <div className="pb-4">
@@ -79,9 +79,25 @@ const AboutMeWindow = ({ zIndex, parentClickHandler }) => {
                 <h3 className="underline">Other Intrests:</h3>
                 <ul className="list-disc pl-8">
                   <li>Indoor Bouldering/ Rock Climbing 🧗‍♂️</li>
+                  <li>Instant Noodles 🍜</li>
                   <li>Gaming (video, board, card, you name it!) 🎮</li>
+                  <li>Puzzles 🧩</li>
                   <li>Reading 📚</li>
+                  <li>my dog, Shiloh 🐶</li>
                 </ul>
+              </div>
+              <div className="pt-4 pb-4 text-center">
+                <p>
+                  I've spent most of my life being a consumer, and now I aim to
+                  CREATE!
+                </p>
+                <p>
+                  If you're interested in working with me, shoot me an email at:
+                  <br />
+                  <p className="text-blue-400 hover:text-blue-200 hover:underline">
+                    📧 torres.joshuabenette@gmail.com 📧
+                  </p>
+                </p>
               </div>
             </div>
           </div>
