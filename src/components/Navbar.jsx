@@ -54,60 +54,36 @@ const Navbar = () => {
             className="hover:animate-spin"
           />
 
-          <div
-            className={`${
-              isWelcomeOpen
-                ? "visible rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400"
-                : "collapse"
-            }`}
-          >
-            <p className="text-white bg-gray-700 rounded-md p-1">Welcome</p>
-          </div>
-          <div
-            className={`${
-              isAboutOpen
-                ? "visible rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400"
-                : "collapse"
-            }`}
-          >
-            <p className="text-white bg-gray-700 rounded-md p-1">About Me</p>
-          </div>
-          <div
-            className={`${
-              isProjectsOpen
-                ? "visible rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400"
-                : "collapse"
-            }`}
-          >
-            <p className="text-white bg-gray-700 rounded-md p-1">Projects</p>
-          </div>
-          <div
-            className={`${
-              isLinksOpen
-                ? "visible rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400"
-                : "collapse"
-            }`}
-          >
-            <p className="text-white bg-gray-700 rounded-md p-1">Links</p>
-          </div>
-          <div
-            className={`${
-              isContactOpen
-                ? "visible rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400"
-                : "collapse"
-            }`}
-          >
-            <p className="text-white bg-gray-700 rounded-md p-1">Contact</p>
-          </div>
-          <div
-            className={`${
-              isCreditsOpen
-                ? "visible rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400"
-                : "collapse"
-            }`}
-          >
-            <p className="text-white bg-gray-700 rounded-md p-1">Credits</p>
-          </div>
+          {isWelcomeOpen && (
+            <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
+              <p className="text-white bg-gray-700 rounded-md p-1">Welcome</p>
+            </div>
+          )}
+          {isAboutOpen && (
+            <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
+              <p className="text-white bg-gray-700 rounded-md p-1">About Me</p>
+            </div>
+          )}
+          {isProjectsOpen && (
+            <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
+              <p className="text-white bg-gray-700 rounded-md p-1">Projects</p>
+            </div>
+          )}
+          {isLinksOpen && (
+            <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
+              <p className="text-white bg-gray-700 rounded-md p-1">Links</p>
+            </div>
+          )}
+          {isContactOpen && (
+            <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
+              <p className="text-white bg-gray-700 rounded-md p-1">Contact</p>
+            </div>
+          )}
+          {isCreditsOpen && (
+            <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
+              <p className="text-white bg-gray-700 rounded-md p-1">Credits</p>
+            </div>
+          )}
         </div>
 
         <div className="flex content-end justify-center items-center gap-3">

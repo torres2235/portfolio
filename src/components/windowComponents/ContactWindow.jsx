@@ -7,7 +7,7 @@ import emailjs from "@emailjs/browser";
 import Window from "../Window";
 
 const ContactWindow = ({ zIndex, parentClickHandler }) => {
-  const { isContactOpen, closeContact } = useGlobalContext();
+  const { closeContact } = useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -36,7 +36,7 @@ const ContactWindow = ({ zIndex, parentClickHandler }) => {
     e.preventDefault();
     setIsSubmitting(true);
     emailjs.send(serviceId, templateId, templateParams, publicKey).then(
-      (result) => {
+      (response) => {
         setStateMessage("Message sent!");
         setIsSubmitting(false);
         setTimeout(() => {
@@ -64,11 +64,7 @@ const ContactWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className={`${
-          isContactOpen
-            ? "show-window visible top-120 left-30 w-1/4"
-            : "show-window collapse top-0 left-0"
-        }`}
+        className="show-window top-120 left-30 w-1/4"
         style={{ zIndex: zIndex }}
       >
         <Window
@@ -140,6 +136,7 @@ const ContactWindow = ({ zIndex, parentClickHandler }) => {
             </button>
             {stateMessage && <p>{stateMessage}</p>}
           </form>
+          <p>or email me directly at torres.joshuabenette@gmail.com</p>
         </Window>
       </div>
     </Draggable>

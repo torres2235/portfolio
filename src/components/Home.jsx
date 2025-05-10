@@ -1,4 +1,5 @@
 import { useGlobalContext } from "../context/context";
+
 // icons
 import world from "../assets/aconfuseddragon1/world.png";
 import profile from "../assets/aconfuseddragon1/text_file_2.png";
@@ -57,7 +58,7 @@ const Home = () => {
           onClick={openContact}
         >
           <img src={email} alt="email" />
-          <p className="text-sm text-center">Contact</p>
+          <p className="text-sm">Contact</p>
         </div>
 
         <div
@@ -65,7 +66,7 @@ const Home = () => {
           onClick={openCredits}
         >
           <img src={search} alt="credits" />
-          <p className="text-sm text-center">Credits</p>
+          <p className="text-sm">Credits</p>
         </div>
       </div>
     </>

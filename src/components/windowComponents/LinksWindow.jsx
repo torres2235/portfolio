@@ -8,7 +8,7 @@ import Window from "../Window.jsx";
 import { socials } from "../../data/links.jsx";
 
 const LinksWindow = ({ zIndex, parentClickHandler }) => {
-  const { isLinksOpen, closeLinks } = useGlobalContext();
+  const { closeLinks } = useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -23,11 +23,7 @@ const LinksWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className={`${
-          isLinksOpen
-            ? "show-window visible top-20 right-50 z-auto"
-            : "show-window collapse top-0 left-0"
-        }`}
+        className="show-window top-20 right-50 z-auto"
         style={{ zIndex: zIndex }}
       >
         <Window

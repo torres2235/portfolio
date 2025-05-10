@@ -7,7 +7,7 @@ import Window from "../Window";
 import boulderBuddy from "../../assets/boulderbuddy/image.png";
 
 const ProjectsWindow = ({ zIndex, parentClickHandler }) => {
-  const { isProjectsOpen, closeProjects } = useGlobalContext();
+  const { closeProjects } = useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -22,11 +22,7 @@ const ProjectsWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className={`${
-          isProjectsOpen
-            ? "show-window visible top-70 left-110 w-2/3 h-3/5 z-20"
-            : "show-window collapse top-0 left-0"
-        }`}
+        className="show-window top-70 left-110 w-2/3 h-3/5 z-20"
         style={{ zIndex: zIndex }}
       >
         <Window

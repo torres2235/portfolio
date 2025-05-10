@@ -6,7 +6,7 @@ import Draggable from "react-draggable";
 import Window from "../Window";
 
 const CreditsWindow = ({ zIndex, parentClickHandler }) => {
-  const { isCreditsOpen, closeCredits } = useGlobalContext();
+  const { closeCredits } = useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -21,11 +21,7 @@ const CreditsWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className={`${
-          isCreditsOpen
-            ? "show-window visible top-30 right-100 w-1/3"
-            : "show-window collapse top-0 left-0"
-        }`}
+        className="show-window top-30 right-100 w-1/3"
         style={{ zIndex: zIndex }}
       >
         <Window

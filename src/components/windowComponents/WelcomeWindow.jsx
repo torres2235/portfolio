@@ -6,7 +6,7 @@ import { FaRegLaugh } from "react-icons/fa";
 import Window from "../Window";
 
 const WelcomeWindow = ({ zIndex, parentClickHandler }) => {
-  const { isWelcomeOpen, closeWelcome } = useGlobalContext();
+  const { closeWelcome } = useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -21,11 +21,7 @@ const WelcomeWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className={`${
-          isWelcomeOpen
-            ? "show-window visible top-50 left-70 w-1/2"
-            : "collapse top-0 left-0"
-        }`}
+        className="show-window top-20 left-100 w-1/2"
         style={{ zIndex: zIndex }}
       >
         <Window

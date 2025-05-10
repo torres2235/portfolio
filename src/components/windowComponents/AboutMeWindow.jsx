@@ -8,7 +8,7 @@ import ucr from "../../assets/ucr.jpg";
 import Window from "../Window";
 
 const AboutMeWindow = ({ zIndex, parentClickHandler }) => {
-  const { isAboutOpen, closeAbout } = useGlobalContext();
+  const { closeAbout } = useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -23,11 +23,7 @@ const AboutMeWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className={`${
-          isAboutOpen
-            ? "show-window visible top-60 left-100 w-3/7 h-3/5"
-            : "collapse top-0 left-0"
-        }`}
+        className="show-window top-40 left-75 w-3/7 h-3/5"
         style={{ zIndex: zIndex }}
       >
         <Window

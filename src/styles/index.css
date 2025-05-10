@@ -8,7 +8,7 @@
 @layer components {
   /* OPEN/CLOSE MODAL */
   .show-window {
-    @apply absolute place-items-center-safe;
+    @apply absolute;
   }
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useGlobalContext } from "./context/context";
 
 // navbar
 import Navbar from "./components/Navbar";
@@ -17,6 +18,15 @@ import CreditsWindow from "./components/windowComponents/CreditsWindow";
 import wallpaper from "./assets/backgrounds/wallpaper4.gif";
 
 function App() {
+  const {
+    isWelcomeOpen,
+    isAboutOpen,
+    isProjectsOpen,
+    isLinksOpen,
+    isContactOpen,
+    isCreditsOpen,
+  } = useGlobalContext();
+
   const [componentList, setComponentList] = useState([
     { id: 0, zIndex: 1 },
     { id: 1, zIndex: 2 },
@@ -46,7 +56,6 @@ function App() {
       style={{ backgroundImage: `url(${wallpaper})` }}
     >
       <Navbar />
-
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -54,40 +63,52 @@ function App() {
         </Routes>
       </Router>
 
-      <WelcomeWindow
-        key={componentList[0].id}
-        zIndex={componentList[0].zIndex}
-        parentClickHandler={() => parentClickHandler(componentList[0].id)}
-      />
-      <AboutMeWindow
-        key={componentList[1].id}
-        zIndex={componentList[1].zIndex}
-        parentClickHandler={() => parentClickHandler(componentList[1].id)}
-      />
-      <ProjectsWindow
-        key={componentList[2].id}
-        zIndex={componentList[2].zIndex}
-        parentClickHandler={() => parentClickHandler(componentList[2].id)}
-      />
-      <Router>
-        <LinksWindow
-          key={componentList[3].id}
-          zIndex={componentList[3].zIndex}
-          parentClickHandler={() => parentClickHandler(componentList[3].id)}
+      {isWelcomeOpen && (
+        <WelcomeWindow
+          key={componentList[0].id}
+          zIndex={componentList[0].zIndex}
+          parentClickHandler={() => parentClickHandler(componentList[0].id)}
         />
-      </Router>
-      <ContactWindow
-        key={componentList[4].id}
-        zIndex={componentList[4].zIndex}
-        parentClickHandler={() => parentClickHandler(componentList[4].id)}
-      />
-      <Router>
-        <CreditsWindow
-          key={componentList[5].id}
-          zIndex={componentList[5].zIndex}
-          parentClickHandler={() => parentClickHandler(componentList[5].id)}
+      )}
+      {isAboutOpen && (
+        <AboutMeWindow
+          key={componentList[1].id}
+          zIndex={componentList[1].zIndex}
+          parentClickHandler={() => parentClickHandler(componentList[1].id)}
         />
-      </Router>
+      )}
+      {isProjectsOpen && (
+        <ProjectsWindow
+          key={componentList[2].id}
+          zIndex={componentList[2].zIndex}
+          parentClickHandler={() => parentClickHandler(componentList[2].id)}
+        />
+      )}
+      {isLinksOpen && (
+        <Router>
+          <LinksWindow
+            key={componentList[3].id}
+            zIndex={componentList[3].zIndex}
+            parentClickHandler={() => parentClickHandler(componentList[3].id)}
+          />
+        </Router>
+      )}
+      {isContactOpen && (
+        <ContactWindow
+          key={componentList[4].id}
+          zIndex={componentList[4].zIndex}
+          parentClickHandler={() => parentClickHandler(componentList[4].id)}
+        />
+      )}
+      {isCreditsOpen && (
+        <Router>
+          <CreditsWindow
+            key={componentList[5].id}
+            zIndex={componentList[5].zIndex}
+            parentClickHandler={() => parentClickHandler(componentList[5].id)}
+          />
+        </Router>
+      )}
     </main>
   );
 }
