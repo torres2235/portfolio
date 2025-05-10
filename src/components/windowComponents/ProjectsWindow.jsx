@@ -22,7 +22,7 @@ const ProjectsWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="show-window top-70 left-110 w-2/3 h-3/5 z-20"
+        className="absolute top-70 left-110 w-2/3 h-3/5 z-20"
         style={{ zIndex: zIndex }}
       >
         <Window

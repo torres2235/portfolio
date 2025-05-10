@@ -23,7 +23,7 @@ const AboutMeWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="show-window top-40 left-75 w-3/7 h-3/5"
+        className="absolute top-40 left-75 w-3/7 h-3/5"
         style={{ zIndex: zIndex }}
       >
         <Window

@@ -7,8 +7,8 @@
 
 @layer components {
   /* OPEN/CLOSE MODAL */
-  .show-window {
-    @apply absolute;
+  .hide-window {
+    @apply absolute collapse;
   }
 }
 

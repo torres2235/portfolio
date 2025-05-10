@@ -21,7 +21,7 @@ const WelcomeWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="show-window top-20 left-100 w-1/2"
+        className="absolute top-20 left-100 w-1/2"
         style={{ zIndex: zIndex }}
       >
         <Window

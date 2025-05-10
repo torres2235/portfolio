@@ -64,7 +64,7 @@ const ContactWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="show-window top-120 left-30 w-1/4"
+        className="absolute top-120 left-30 w-1/4"
         style={{ zIndex: zIndex }}
       >
         <Window

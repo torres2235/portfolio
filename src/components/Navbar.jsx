@@ -59,26 +59,31 @@ const Navbar = () => {
               <p className="text-white bg-gray-700 rounded-md p-1">Welcome</p>
             </div>
           )}
+
           {isAboutOpen && (
             <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
               <p className="text-white bg-gray-700 rounded-md p-1">About Me</p>
             </div>
           )}
+
           {isProjectsOpen && (
             <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
               <p className="text-white bg-gray-700 rounded-md p-1">Projects</p>
             </div>
           )}
+
           {isLinksOpen && (
             <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
               <p className="text-white bg-gray-700 rounded-md p-1">Links</p>
             </div>
           )}
+
           {isContactOpen && (
             <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
               <p className="text-white bg-gray-700 rounded-md p-1">Contact</p>
             </div>
           )}
+
           {isCreditsOpen && (
             <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
               <p className="text-white bg-gray-700 rounded-md p-1">Credits</p>

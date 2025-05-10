@@ -21,7 +21,7 @@ const CreditsWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="show-window top-30 right-100 w-1/3"
+        className="absolute top-30 right-100 w-1/3"
         style={{ zIndex: zIndex }}
       >
         <Window

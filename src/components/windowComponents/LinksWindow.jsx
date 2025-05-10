@@ -23,7 +23,7 @@ const LinksWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="show-window top-20 right-50 z-auto"
+        className="absolute top-20 right-50 z-auto"
         style={{ zIndex: zIndex }}
       >
         <Window
