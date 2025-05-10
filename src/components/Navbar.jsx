@@ -40,6 +40,7 @@ const Navbar = () => {
     isProjectsOpen,
     isLinksOpen,
     isContactOpen,
+    isBlogOpen,
     isCreditsOpen,
   } = useGlobalContext();
 
@@ -81,6 +82,12 @@ const Navbar = () => {
           {isContactOpen && (
             <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
               <p className="text-white bg-gray-700 rounded-md p-1">Contact</p>
+            </div>
+          )}
+
+          {isBlogOpen && (
+            <div className="rounded-lg cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:border-2 hover:border-blue-400">
+              <p className="text-white bg-gray-700 rounded-md p-1">Blog</p>
             </div>
           )}
 

@@ -61,20 +61,6 @@ const AppProvider = ({ children }) => {
 
   /*
   =============== 
-  Credits Window
-  ===============
-  */
-  const [isCreditsOpen, setIsCreditsOpen] = useState(false);
-
-  const openCredits = () => {
-    setIsCreditsOpen(true);
-  };
-  const closeCredits = () => {
-    setIsCreditsOpen(false);
-  };
-
-  /*
-  =============== 
   Contact Window
   ===============
   */
@@ -85,6 +71,34 @@ const AppProvider = ({ children }) => {
   };
   const closeContact = () => {
     setIsContactOpen(false);
+  };
+
+  /*
+  =============== 
+  Blog Window
+  ===============
+  */
+  const [isBlogOpen, setIsBlogOpen] = useState(false);
+
+  const openBlog = () => {
+    setIsBlogOpen(true);
+  };
+  const closeBlog = () => {
+    setIsBlogOpen(false);
+  };
+
+  /*
+  =============== 
+  Credits Window
+  ===============
+  */
+  const [isCreditsOpen, setIsCreditsOpen] = useState(false);
+
+  const openCredits = () => {
+    setIsCreditsOpen(true);
+  };
+  const closeCredits = () => {
+    setIsCreditsOpen(false);
   };
 
   return (
@@ -105,6 +119,9 @@ const AppProvider = ({ children }) => {
         isContactOpen,
         openContact,
         closeContact,
+        isBlogOpen,
+        openBlog,
+        closeBlog,
         isCreditsOpen,
         openCredits,
         closeCredits,

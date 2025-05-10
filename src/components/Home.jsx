@@ -8,11 +8,13 @@ import folder from "../assets/aconfuseddragon1/folder_open.png";
 import link from "../assets/aconfuseddragon1/this_computer.png";
 import email from "../assets/aconfuseddragon1/mail.png";
 import search from "../assets/aconfuseddragon1/search.png";
+import workspace from "../assets/aconfuseddragon2/workspace.png";
 // windows
 import WelcomeWindow from "./windowComponents/WelcomeWindow";
 import AboutMeWindow from "./windowComponents/AboutMeWindow";
 import ProjectsWindow from "./windowComponents/ProjectsWindow";
 import LinksWindow from "./windowComponents/LinksWindow";
+import BlogWindow from "./windowComponents/BlogWindow";
 import ContactWindow from "./windowComponents/ContactWindow";
 import CreditsWindow from "./windowComponents/CreditsWindow";
 
@@ -21,14 +23,16 @@ const Home = () => {
     openWelcome,
     openAbout,
     openProjects,
-    openContact,
     openLinks,
+    openContact,
+    openBlog,
     openCredits,
     isWelcomeOpen,
     isAboutOpen,
     isProjectsOpen,
     isLinksOpen,
     isContactOpen,
+    isBlogOpen,
     isCreditsOpen,
   } = useGlobalContext();
 
@@ -39,6 +43,7 @@ const Home = () => {
     { id: 3, zIndex: 0 },
     { id: 4, zIndex: 0 },
     { id: 5, zIndex: 0 },
+    { id: 6, zIndex: 0 },
   ]);
 
   function parentClickHandler(id) {
@@ -116,8 +121,19 @@ const Home = () => {
         <div
           className="flex flex-col justify-center items-center bg-gray-400/50 h-20 w-20 p-2 rounded-lg cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-400/100 hover:border-2 hover:border-fuchsia-900"
           onClick={() => {
-            openCredits();
+            openBlog();
             parentClickHandler(componentList[5].id);
+          }}
+        >
+          <img src={workspace} alt="workspace" />
+          <p className="text-sm">Blog</p>
+        </div>
+
+        <div
+          className="flex flex-col justify-center items-center bg-gray-400/50 h-20 w-20 p-2 rounded-lg cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-400/100 hover:border-2 hover:border-fuchsia-900"
+          onClick={() => {
+            openCredits();
+            parentClickHandler(componentList[6].id);
           }}
         >
           <img src={search} alt="credits" />
@@ -160,11 +176,18 @@ const Home = () => {
           parentClickHandler={() => parentClickHandler(componentList[4].id)}
         />
       )}
-      {isCreditsOpen && (
-        <CreditsWindow
+      {isBlogOpen && (
+        <BlogWindow
           key={componentList[5].id}
           zIndex={componentList[5].zIndex}
           parentClickHandler={() => parentClickHandler(componentList[5].id)}
+        />
+      )}
+      {isCreditsOpen && (
+        <CreditsWindow
+          key={componentList[6].id}
+          zIndex={componentList[6].zIndex}
+          parentClickHandler={() => parentClickHandler(componentList[6].id)}
         />
       )}
     </>
