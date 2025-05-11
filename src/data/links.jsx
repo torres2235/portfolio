@@ -1,4 +1,3 @@
-import React from "react";
 import { FaLinkedin, FaGithub, FaInstagram, FaSteam } from "react-icons/fa";
 import { BsFillPatchQuestionFill } from "react-icons/bs";
 
@@ -29,7 +28,7 @@ export const socials = [
   },
   {
     id: 5,
-    url: "https://www.youtube.com/watch?v=msDfRhml9GQ&list=PL0Rb25NUY6frmQpjx8c_amD8ALFyhEd2P&index=1",
+    url: "https://www.youtube.com/watch?v=h46cROf_ttw&list=PL0Rb25NUY6frmQpjx8c_amD8ALFyhEd2P&index=1",
     text: "???",
     icon: <BsFillPatchQuestionFill size={70} />,
   },
