@@ -7,7 +7,8 @@ import emailjs from "@emailjs/browser";
 import Window from "../Window";
 
 const ContactWindow = ({ zIndex, parentClickHandler }) => {
-  const { closeContact } = useGlobalContext();
+  const { closeContact, isContactVisible, toggleContactVisible } =
+    useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -64,11 +65,14 @@ const ContactWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="absolute top-120 left-30 w-1/4"
+        className={`absolute top-100 left-30 w-1/4 ${
+          isContactVisible ? "visible" : "hidden"
+        }`}
         style={{ zIndex: zIndex }}
       >
         <Window
           closeContext={closeContact}
+          toggleContext={toggleContactVisible}
           icon={<IoChatbubble className="ml-1" />}
           windowName={"Contact Me"}
         >

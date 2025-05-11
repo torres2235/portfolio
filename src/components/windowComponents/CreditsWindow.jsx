@@ -6,7 +6,8 @@ import Draggable from "react-draggable";
 import Window from "../Window";
 
 const CreditsWindow = ({ zIndex, parentClickHandler }) => {
-  const { closeCredits } = useGlobalContext();
+  const { closeCredits, isCreditsVisible, toggleCreditsVisible } =
+    useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -21,11 +22,14 @@ const CreditsWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="absolute top-30 right-100 w-1/3"
+        className={`absolute top-30 right-100 w-1/3 ${
+          isCreditsVisible ? "visible" : "hidden"
+        }`}
         style={{ zIndex: zIndex }}
       >
         <Window
           closeContext={closeCredits}
+          toggleContext={toggleCreditsVisible}
           icon={<FaTags className="ml-1" />}
           windowName={"Credits"}
         >
@@ -36,7 +40,7 @@ const CreditsWindow = ({ zIndex, parentClickHandler }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              aconfuseddragon's 𝕎𝕚𝕟𝕕𝕠𝕨𝕤 𝟡𝟝 +𝓟𝓛𝓤𝓢+ Icon Pack #1
+              aconfuseddragon's 𝕎𝕚𝕟𝕕𝕠𝕨𝕤 𝟡𝟝 +𝓟𝓛𝓤𝓢+ Icon Pack #1 & #2
             </a>
             <a
               href="https://react-icons.github.io/react-icons/"

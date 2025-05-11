@@ -6,7 +6,7 @@ import { CiBowlNoodles } from "react-icons/ci";
 import Window from "../Window";
 
 const BlogWindow = ({ zIndex, parentClickHandler }) => {
-  const { closeBlog } = useGlobalContext();
+  const { closeBlog, isBlogVisible, toggleBlogVisible } = useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -21,11 +21,14 @@ const BlogWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="absolute top-20 left-100 w-1/5 h-1/8 text-center"
+        className={`absolute top-30 left-110 w-1/5 h-1/8 text-center ${
+          isBlogVisible ? "visible" : "hidden"
+        }`}
         style={{ zIndex: zIndex }}
       >
         <Window
           closeContext={closeBlog}
+          toggleContext={toggleBlogVisible}
           icon={<CiBowlNoodles className="ml-1" />}
           windowName={"Personal Blog"}
         >

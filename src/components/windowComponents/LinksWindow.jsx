@@ -8,7 +8,7 @@ import Window from "../Window.jsx";
 import { socials } from "../../data/links.jsx";
 
 const LinksWindow = ({ zIndex, parentClickHandler }) => {
-  const { closeLinks } = useGlobalContext();
+  const { closeLinks, isLinksVisible, toggleLinksVisible } = useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -23,11 +23,14 @@ const LinksWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="absolute top-20 right-50 z-auto"
+        className={`absolute top-20 right-50 z-auto ${
+          isLinksVisible ? "visible" : "hidden"
+        }`}
         style={{ zIndex: zIndex }}
       >
         <Window
           closeContext={closeLinks}
+          toggleContext={toggleLinksVisible}
           icon={<FaProjectDiagram className="ml-1" />}
           windowName={"Links"}
         >

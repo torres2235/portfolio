@@ -7,7 +7,8 @@ import Window from "../Window";
 import boulderBuddy from "../../assets/boulderbuddy/image.png";
 
 const ProjectsWindow = ({ zIndex, parentClickHandler }) => {
-  const { closeProjects } = useGlobalContext();
+  const { closeProjects, isProjectsVisible, toggleProjectsVisible } =
+    useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -22,11 +23,14 @@ const ProjectsWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="absolute top-70 left-110 w-2/3 h-3/5 z-20"
+        className={`absolute top-70 left-110 w-2/3 h-3/5 z-20 ${
+          isProjectsVisible ? "visible" : "hidden"
+        }`}
         style={{ zIndex: zIndex }}
       >
         <Window
           closeContext={closeProjects}
+          toggleContext={toggleProjectsVisible}
           icon={<FaFolderOpen className="ml-1" />}
           windowName={"Projects"}
         >

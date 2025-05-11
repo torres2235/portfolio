@@ -8,7 +8,7 @@ import ucr from "../../assets/ucr.jpg";
 import Window from "../Window";
 
 const AboutMeWindow = ({ zIndex, parentClickHandler }) => {
-  const { closeAbout } = useGlobalContext();
+  const { closeAbout, isAboutVisible, toggleAboutVisible } = useGlobalContext();
   const nodeRef = useRef(null);
 
   function clickHandler() {
@@ -23,11 +23,14 @@ const AboutMeWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className="absolute top-40 left-75 w-3/7 h-3/5"
+        className={`absolute top-40 left-75 w-3/7 h-3/5 ${
+          isAboutVisible ? "visible" : "hidden"
+        }`}
         style={{ zIndex: zIndex }}
       >
         <Window
           closeContext={closeAbout}
+          toggleContext={toggleAboutVisible}
           icon={<FaChild className="ml-1" />}
           windowName={"About Me"}
         >
