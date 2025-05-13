@@ -7,13 +7,21 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Error from "./components/Error";
 
-import wallpaper from "./assets/backgrounds/wallpaper4.gif";
+import { useGlobalContext } from "./context/context";
+
+import dark from "./assets/backgrounds/wallpaper4.gif";
+import light from "./assets/backgrounds/wallpaper4-white.gif";
 
 function App() {
+  const { mode } = useGlobalContext();
   return (
     <main
-      className="w-screen h-screen overscroll-none no-scrollbar bg-cover bg-center bg-no-repeat text-white font-pixel"
-      style={{ backgroundImage: `url(${wallpaper})` }}
+      className="w-screen h-screen overscroll-none no-scrollbar bg-cover bg-center bg-no-repeat text-white font-pixel transition duration-100 ease-in-out"
+      style={
+        mode === "dark"
+          ? { backgroundImage: `url(${dark})` }
+          : { backgroundImage: `url(${light})` }
+      }
     >
       <Navbar />
       <Router>

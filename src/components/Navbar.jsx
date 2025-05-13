@@ -49,11 +49,17 @@ const Navbar = () => {
     toggleBlogVisible,
     isCreditsOpen,
     toggleCreditsVisible,
+    mode,
+    toggleMode,
   } = useGlobalContext();
 
   return (
     <nav>
-      <div className="flex justify-between bg-black border-b-blue-500 border-b-2 pt-0.5 pb-0.5 pr-5 pl-5">
+      <div
+        className={`flex justify-between ${
+          mode === "dark" ? "bg-black" : "bg-stone-300"
+        } border-b-blue-500 border-b-2 pt-0.5 pb-0.5 pr-5 pl-5`}
+      >
         <div className="flex flex-row items-center gap-2">
           <img
             src={noodles}
@@ -136,12 +142,12 @@ const Navbar = () => {
             <div id="clock" />
           </div>
 
-          <button>
+          <button onClick={toggleMode}>
             <img
-              src={sun}
+              src={mode === "dark" ? sun : moon}
               style={{ width: "1.5rem" }}
-              alt="sun"
-              className="hover:animate-pulse"
+              alt="sun/moon"
+              className="hover:animate-pulse cursor-pointer"
             />
           </button>
         </div>

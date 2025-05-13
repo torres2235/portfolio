@@ -145,6 +145,22 @@ const AppProvider = ({ children }) => {
     setIsCreditsVisible((current) => !current);
   };
 
+  /*
+  =============== 
+  Light/Dark Mode
+  ===============
+  */
+
+  const [mode, setMode] = useState("dark");
+
+  const toggleMode = () => {
+    if (mode === "dark") {
+      setMode("light");
+    } else {
+      setMode("dark");
+    }
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -189,6 +205,9 @@ const AppProvider = ({ children }) => {
         openCredits,
         closeCredits,
         toggleCreditsVisible,
+
+        mode,
+        toggleMode,
       }}
     >
       {children}
