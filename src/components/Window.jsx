@@ -10,7 +10,7 @@ const Window = ({
 }) => {
   return (
     <>
-      <div className="flex flex-col bg-gray-200 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100 size-full">
+      <div className="flex flex-col bg-gray-200 border-blue-400 border-2 rounded-md drop-shadow-lg drop-shadow-indigo-500/100 size-full ">
         <div className="flex flex-row justify-between items-center rounded-md cursor-move ml-1 mr-1">
           <div className="text-black flex flex-row items-center">
             {icon}

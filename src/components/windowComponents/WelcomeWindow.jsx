@@ -22,8 +22,8 @@ const WelcomeWindow = ({ zIndex, parentClickHandler }) => {
     >
       <div
         ref={nodeRef}
-        className={`absolute top-20 left-100 w-1/2 ${
-          isWelcomeVisible ? "visible" : "hidden"
+        className={`absolute top-20 left-100 w-1/2 origin-left ${
+          isWelcomeVisible ? "scale-100" : "duration-100 scale-0"
         }`}
         style={{ zIndex: zIndex }}
       >
