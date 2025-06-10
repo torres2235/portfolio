@@ -1,7 +1,8 @@
-import { useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useGlobalContext } from "../../context/context";
 import Draggable from "react-draggable";
 import { FaRegLaugh } from "react-icons/fa";
+import axios from "axios";
 
 import Window from "../Window";
 
@@ -13,6 +14,21 @@ const WelcomeWindow = ({ zIndex, parentClickHandler }) => {
   function clickHandler() {
     parentClickHandler();
   }
+
+  /*
+    =============== 
+    Fetch API
+    ===============
+    */
+  const [array, setArray] = useState([]);
+  const fetchAPI = async () => {
+    const response = await axios.get("http://localhost:8080/api");
+    setArray(response.data.users);
+  };
+
+  useEffect(() => {
+    fetchAPI();
+  }, []);
 
   return (
     <Draggable
@@ -49,6 +65,13 @@ const WelcomeWindow = ({ zIndex, parentClickHandler }) => {
             of making it work for mobile!
           </p>
           <p>Thanks for checking me out and stopping by (●'◡'●)</p>
+
+          {array.map((users, index) => (
+            <div key={index}>
+              <p>{users}</p>
+              <br />
+            </div>
+          ))}
         </Window>
       </div>
     </Draggable>

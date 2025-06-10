@@ -1,7 +1,8 @@
 {
-  "name": "vite-project",
+  "name": "jtorr-desktop",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "proxy": "http://localhost:5000",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,6 +13,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.4",
+    "axios": "^1.9.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-draggable": "^4.4.6",

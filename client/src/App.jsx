@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // navbar
@@ -14,6 +13,7 @@ import light from "./assets/backgrounds/wallpaper4-white.gif";
 
 function App() {
   const { mode } = useGlobalContext();
+
   return (
     <main
       className="w-screen h-screen overscroll-none no-scrollbar bg-cover bg-center bg-no-repeat text-white font-pixel transition duration-100 ease-in-out"
